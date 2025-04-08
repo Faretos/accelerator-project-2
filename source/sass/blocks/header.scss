@@ -1,0 +1,54 @@
+.header {
+  background-color: $accent-color;
+}
+
+.header__wrapper {
+  width: 320px;
+  padding: 15px;
+}
+
+.header__burger-menu-button {
+  position: relative;
+  width: 26px;
+  height: 26px;
+}
+
+.header__burger-menu-button--openned {
+  &::before {
+    @include pseudo(30px, 2px);
+
+    top: 50%;
+    left: -3px;
+    transform: rotate(45deg) translateY(-50%);
+    background-color: $secondary-text-color;
+  }
+
+  &::after {
+    @include pseudo(30px, 2px);
+
+    top: 50%;
+    left: -1px;
+    transform: rotate(-45deg) translateY(-50%);
+    background-color: $secondary-text-color;
+  }
+}
+
+.header__burger-menu-button--closed {
+  &::before {
+    @include pseudo(16px, 2px);
+
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+    background-color: $secondary-text-color;
+  }
+
+  &::after {
+    @include pseudo(100%, 2px);
+
+    top: 4px;
+    left: 0;
+    background-color: $secondary-text-color;
+    box-shadow: 0 16px 0 0;
+  }
+}

@@ -1,31 +1,77 @@
 <!DOCTYPE html>
 <html lang="ru" data-validate="html">
 
-  <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Lifetour</title>
-    <link rel="stylesheet" href="sass/style.scss">
-  </head>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lifetour</title>
+  <link rel="icon" href="./public/favicon-16x16.png" sizes="16x16">
+  <link rel="icon" href="favicon.ico" sizes="32x32">
+  <link rel="apple-touch-icon" href="./public/apple-icon-180x180.png" sizes="180x180">
+  <link rel="manifest" href="manifest.webmanifest">
+  <link rel="preload" href="./fonts/Montserrat-Light.woff2" type="font/woff2" as="font" crossorigin="anonymous">
+  <link rel="preload" href="./fonts/Montserrat-Regular.woff2" type="font/woff2" as="font" crossorigin="anonymous">
+  <link rel="preload" href="./fonts/Montserrat-Medium.woff2" type="font/woff2" as="font" crossorigin="anonymous">
+  <link rel="preload" href="./fonts/Montserrat-SemiBold.woff2" type="font/woff2" as="font" crossorigin="anonymous">
+  <link rel="preload" href="./fonts/Montserrat-Bold.woff2" type="font/woff2" as="font" crossorigin="anonymous">
+  <link rel="preload" href="./fonts/Montserrat-ExtraBold.woff2" type="font/woff2" as="font" crossorigin="anonymous">
+  <link rel="stylesheet" href="sass/style.scss">
+</head>
 
-  <body class="page-body">
-    <!-- пример использования спрайта -->
-    <img src="/__spritemap#sprite-logo-view" alt="Это спрайт">
-    <svg>
-      <use href="/__spritemap#sprite-user"></use>
-    </svg>
-    <!-- примеры требуемых атрибутов data-test="*" -->
-    <div data-test="header">header</div>
-    <div data-test="hero">hero</div>
-    <div data-test="tours">tours</div>
-    <div data-test="training">training</div>
-    <div data-test="about">about</div>
-    <div data-test="reviews">reviews</div>
-    <div data-test="adv">adv</div>
-    <div data-test="gallery">gallery</div>
-    <div data-test="form">form</div>
-    <div data-test="footer">footer</div>
-    <script type="module" src="js/main.js"></script>
-  </body>
+<body class="page-body">
+  <header class="header" data-test="header">
+    <div class="header__wrapper">
+      <nav class="header__navigation">
+        <button class="header__burger-menu-button button header__burger-menu-button--openned" type="button">
+          <span class="visually-hidden">Меню навигации</span>
+        </button>
+        <ul class="header__navigation-list list-style-reset">
+          <li class="header__navigation-item">
+            <a class="header__navigation-link" href="#">Туры</a>
+          </li>
+          <li class="header__navigation-item">
+            <a class="header__navigation-link" href="#">Обучение</a>
+          </li>
+          <li class="header__navigation-item">
+            <a class="header__navigation-link" href="#">О нас</a>
+          </li>
+          <li class="header__navigation-item">
+            <a class="header__navigation-link" href="#">Отзывы</a>
+          </li>
+          <li class="header__navigation-item">
+            <a class="header__navigation-link" href="#">Фотографии</a>
+          </li>
+          <li class="header__navigation-item">
+            <a class="header__navigation-link" href="#">Контакты</a>
+          </li>
+        </ul>
+      </nav>
+      <div class="header__logo-wrapper">
+        <picture>
+          <source type="image/svg+xml" media="(min-width: 1440px)" srcset="/__spritemap#sprite-logo-view" width="142" height="42">
+          <source type="image/svg+xml" media="(min-width: 768px)" srcset="/__spritemap#sprite-logo-view" width="142" height="42">
+          <img class="header__logo-image" src="/__spritemap#sprite-logo-view" width="142" height="42" alt="Логотип Lifetour">
+        </picture>
+      </div>
+      <a class="header__telephone" href="tel:+78000000000">8 800 000-00-00</a>
+    </div>
+  </header>
+  <!-- пример использования спрайта -->
+  <!-- <img src="/__spritemap#sprite-logo-view" alt="Это спрайт">
+  <svg>
+    <use href="/__spritemap#sprite-user"></use>
+  </svg> -->
+  <!-- примеры требуемых атрибутов data-test="*" -->
+  <div data-test="hero">hero</div>
+  <div data-test="tours">tours</div>
+  <div data-test="training">training</div>
+  <div data-test="about">about</div>
+  <div data-test="reviews">reviews</div>
+  <div data-test="adv">adv</div>
+  <div data-test="gallery">gallery</div>
+  <div data-test="form">form</div>
+  <div data-test="footer">footer</div>
+  <script type="module" src="js/main.js"></script>
+</body>
 
 </html>
