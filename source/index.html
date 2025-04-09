@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="ru" data-validate="html">
+<html class="page" lang="ru" data-validate="html">
 
 <head>
   <meta charset="UTF-8">
@@ -56,13 +56,58 @@
       <a class="header__telephone" href="tel:+78000000000">8 800 000-00-00</a>
     </div>
   </header>
+  <main class="page-main">
+    <section class="hero" data-test="hero">
+      <h1 class="visually-hidden">Наши туры</h1>
+      <div class="hero__wrapper swiper">
+        <div class="swiper-wrapper">
+          <div class="hero__card swiper-slide hero__card--kavkaz" tabindex="0">
+            <div class="hero__card-content">
+              <h2>Захватывающие вершины Кавказа</h2>
+              <p>В сопровождении опытных гидов
+                вы пройдёте через потрясающие
+                ландшафты и совершите восход
+                на вершину горы Чегет.</p>
+              <button class="hero__card-button button" type="button">Смотреть тур</button>
+              <div class="hero__card-about">
+                <span class="hero__card-time">6 дней/5 ночей</span>
+                <span class="hero__card-difficult">Высокая сложность</span>
+              </div>
+            </div>
+          </div>
+          <div class="hero__card swiper-slide hero__card--kamchatka" tabindex="0">
+            <div class="hero__card-content">
+              <h2>Невероятная природа Камчатки</h2>
+              <p>Незабываемое приключение, во время которого вы отправитесь в путешествие по одному из самых нетронутых уголков дикой<br> природы в мире.</p>
+              <button class="hero__card-button button" type="button">Смотреть тур</button>
+              <div class="hero__card-about">
+                <span class="hero__card-time">9 дней/10 ночей</span>
+                <span class="hero__card-difficult">Средняя сложность</span>
+              </div>
+            </div>
+          </div>
+          <div class="hero__card swiper-slide hero__card--altai" tabindex="0">
+            <div class="hero__card-content">
+              <h2>Магические пейзажи Алтайского Края</h2>
+              <p>Алтайский трекинг-тур – это захватывающее приключение с посещением магических и захватывающих дух ландшафтов Алтайских гор.</p>
+              <button class="hero__card-button button" type="button">Смотреть тур</button>
+              <div class="hero__card-about">
+                <span class="hero__card-time">8 дней/7 ночей</span>
+                <span class="hero__card-difficult">Лёгкая сложность</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="swiper-pagination hero__pagination"></div>
+      </div>
+    </section>
+  </main>
   <!-- пример использования спрайта -->
   <!-- <img src="/__spritemap#sprite-logo-view" alt="Это спрайт">
   <svg>
     <use href="/__spritemap#sprite-user"></use>
   </svg> -->
   <!-- примеры требуемых атрибутов data-test="*" -->
-  <div data-test="hero">hero</div>
   <div data-test="tours">tours</div>
   <div data-test="training">training</div>
   <div data-test="about">about</div>

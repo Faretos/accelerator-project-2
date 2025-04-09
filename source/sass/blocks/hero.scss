@@ -1,0 +1,103 @@
+.hero__card {
+  @include flex (space-between, column, center);
+
+  position: relative;
+  z-index: 1;
+  min-height: 568px;
+  padding: 40px 0 56px;
+  background-color: $hero-card-bg-color;
+
+  &--kavkaz {
+    background-image: url("../../img/hero/kavkaz-mountains@1x.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+  }
+
+  &--kamchatka {
+    background-image: url("../../img/hero/kamchatka-mountains@1x.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+  }
+
+  &--altai {
+    background-image: url("../../img/hero/altai-mountains@1x.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+  }
+
+  &::after {
+    @include pseudo (100%, 100%);
+
+    top: 0;
+    left: 0;
+
+    z-index: -1;
+    background: $hero-card-gradient;
+    opacity: 0.4;
+  }
+}
+
+.hero__card-content {
+  width: 320px;
+  margin: 0 auto;
+  padding: 0 15px;
+  text-align: center;
+}
+
+.hero__card-content h2 {
+  margin: 0 0 15px;
+  padding: 0;
+  font-family: $primary-font;
+  font-size: 26px;
+  line-height: 26px;
+  font-weight: 800;
+  color: $secondary-text-color;
+}
+
+.hero__card-content p {
+  margin: 0 0 60px;
+  padding: 0;
+  font-family: $primary-font;
+  font-size: 15px;
+  line-height: 20px;
+  font-weight: 400;
+  color: $secondary-text-color;
+}
+
+.hero__card-button {
+  margin: 0;
+  padding: 21px 34px 19px;
+  font-family: $primary-font;
+  font-size: 16px;
+  line-height: 16px;
+  font-weight: 500;
+  color: $secondary-text-color;
+  border: none;
+  background-color: $accent-color;
+}
+
+.hero__card-about {
+  display: none;
+}
+
+.hero__wrapper .hero__pagination {
+  bottom: 36px;
+}
+
+.hero__pagination-bullet {
+  width: 16px;
+  height: 16px;
+  border: 1px solid $secondary-text-color;
+  opacity: 1;
+}
+
+.hero__pagination-bullet:not(.hero__pagination-bullet--active) {
+  background-color: transparent;
+}
+
+.hero__pagination-bullet--active {
+  background-color: $secondary-text-color;
+}
