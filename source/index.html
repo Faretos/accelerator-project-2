@@ -19,6 +19,7 @@
 </head>
 
 <body class="page-body">
+  <!-- HEADER -->
   <header class="header" data-test="header">
     <div class="header__wrapper">
       <button class="header__burger-menu-button button" type="button">
@@ -56,7 +57,9 @@
       <a class="header__telephone" href="tel:+78000000000">8 800 000-00-00</a>
     </div>
   </header>
+  <!-- MAIN -->
   <main class="page-main">
+    <!-- HERO -->
     <section class="hero" data-test="hero">
       <h1 class="visually-hidden">Наши туры</h1>
       <div class="hero__wrapper swiper">
@@ -110,6 +113,46 @@
         <div class="swiper-pagination hero__pagination"></div>
       </div>
     </section>
+    <!-- TOURS -->
+    <section class="tours" data-test="tours">
+      <div class="tours__wrapper">
+        <h2 class="tours__title title-reset">Ближайшие туры</h2>
+        <span class="tours__title-shadow">Ближайшие туры</span>
+        <div class="tours__slider-buttons">
+          <div class="tours__prev-slide swiper-button-prev"></div>
+          <div class="tours__next-slide swiper-button-next"></div>
+        </div>
+        <div class="tours__catalog-wrapper swiper">
+          <div class="tours__catalog swiper-wrapper">
+            <div class="tours__card swiper-slide" tabindex="0">
+              <picture>
+                <source type="image/webp" media="(min-width: 1440px)" srcset="./img/tours/elbrus@1x.webp, ./img/tours/elbrus@2x.webp 2x" width="380" height="416">
+                <source type="image/webp" media="(min-width: 768px)" srcset="./img/tours/elbrus@1x.webp, ./img/tours/elbrus@2x.webp 2x" width="330" height="416">
+                <source type="image/webp" srcset="./img/tours/elbrus@1x.webp, ./img/tours/elbrus@2x.webp 2x" width="290" height="416">
+
+                <source type="image/jpg" media="(min-width: 1440px)" srcset="./img/tours/elbrus@1x.jpg, ./img/tours/elbrus@2x.jpg 2x" width="380" height="416">
+                <source type="image/jpg" media="(min-width: 768px)" srcset="./img/tours/elbrus@1x.jpg, ./img/tours/elbrus@2x.jpg 2x" width="330" height="416">
+                <img class="tours__card-image" src="./img/tours/elbrus@1x.jpg" srcset="./img/tours/elbrus@2x.jpg 2x" width="290" height="416" alt="Гора Эльбрус">
+              </picture>
+              <div class="tours__about-first-part-wrapper">
+                <span class="tours__card-place">Кавказ</span>
+                <span class="tours__card-days">4 дня</span>
+                <span class="tours__card-nights">3 ночи</span>
+              </div>
+              <h3 class="tours__card-title">Путешествие вокруг Эльбруса</h3>
+              <div class="tours__about-second-part-wrapper">
+                <span class="tours__card-difficult-text">Сложность:</span>
+                <span class="tours__card-date-text">Даты набора:</span>
+                <span class="tours__card-date-number">12.06–19.06</span>
+                <span class="tours__card-people-amount-text">Группа:</span>
+                <span class="tours__card-people-amount-number">до 15 чел.</span>
+              </div>
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
   </main>
   <!-- пример использования спрайта -->
   <!-- <img src="/__spritemap#sprite-logo-view" alt="Это спрайт">
@@ -117,7 +160,6 @@
     <use href="/__spritemap#sprite-user"></use>
   </svg> -->
   <!-- примеры требуемых атрибутов data-test="*" -->
-  <div data-test="tours">tours</div>
   <div data-test="training">training</div>
   <div data-test="about">about</div>
   <div data-test="reviews">reviews</div>
