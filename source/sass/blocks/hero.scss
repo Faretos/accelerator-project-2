@@ -6,23 +6,42 @@
   min-height: 568px;
   padding: 40px 0 56px;
   background-color: $hero-card-bg-color;
+  transition: background-position 0.6s ease;
 
   &--kavkaz {
-    background-image: url("../../img/hero/kavkaz-mountains@1x.jpg");
+    background-image:
+      image-set(
+        url("../../img/hero/kavkaz-mountains@1x.webp") type("image/webp") 1x,
+        url("../../img/hero/kavkaz-mountains@2x.webp") type("image/webp") 2x,
+        url("../../img/hero/kavkaz-mountains@1x.jpg") type("image/jpg") 1x,
+        url("../../img/hero/kavkaz-mountains@2x.jpg") type("image/jpg") 2x
+      );
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
   }
 
   &--kamchatka {
-    background-image: url("../../img/hero/kamchatka-mountains@1x.jpg");
+    background-image:
+      image-set(
+        url("../../img/hero/kamchatka-mountains@1x.webp") type("image/webp") 1x,
+        url("../../img/hero/kamchatka-mountains@2x.webp") type("image/webp") 2x,
+        url("../../img/hero/kamchatka-mountains@1x.jpg") type("image/jpg") 1x,
+        url("../../img/hero/kamchatka-mountains@2x.jpg") type("image/jpg") 2x
+      );
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
   }
 
   &--altai {
-    background-image: url("../../img/hero/altai-mountains@1x.jpg");
+    background-image:
+      image-set(
+        url("../../img/hero/altai-mountains@1x.webp") type("image/webp") 1x,
+        url("../../img/hero/altai-mountains@2x.webp") type("image/webp") 2x,
+        url("../../img/hero/altai-mountains@1x.jpg") type("image/jpg") 1x,
+        url("../../img/hero/altai-mountains@2x.jpg") type("image/jpg") 2x
+      );
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
@@ -44,6 +63,24 @@
     min-height: 1034px;
     padding: 0;
   }
+
+  @media (min-width: $desktop-width) {
+    min-height: 800px;
+  }
+
+  @media (width >= 1441px) {
+    &--kavkaz {
+      background-position: bottom;
+    }
+
+    &--kamchatka {
+      background-position: bottom;
+    }
+
+    &--altai {
+      background-position: bottom;
+    }
+  }
 }
 
 .hero__card--kamchatka .hero__card-content p br {
@@ -62,11 +99,27 @@
     width: 768px;
     padding: 342px 45px;
   }
+
+  @media (min-width: $desktop-width) {
+    width: 1440px;
+    padding: 200px 500px 80px 120px;
+    text-align: left;
+  }
 }
 
 .hero__card--kamchatka .hero__card-content {
   @media (min-width: $tablet-width) {
     padding: 137px 45px 0;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding: 200px 514px 80px 120px;
+  }
+}
+
+.hero__card--altai .hero__card-content {
+  @media (min-width: $desktop-width) {
+    padding: 200px 376px 80px 120px;
   }
 }
 
@@ -83,6 +136,12 @@
     margin: 0 0 13px;
     font-size: 56px;
     line-height: 56px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin: 0 0 23px;
+    font-size: 77px;
+    line-height: 77px;
   }
 }
 
@@ -101,6 +160,17 @@
     font-size: 17px;
     line-height: 24px;
   }
+
+  @media (min-width: $desktop-width) {
+    width: 464px;
+    margin: 0 0 37px;
+  }
+}
+
+.hero__card--kavkaz .hero__card-content p {
+  @media (min-width: $desktop-width) {
+    width: 420px;
+  }
 }
 
 .hero__card-button {
@@ -113,6 +183,14 @@
   color: $secondary-text-color;
   border: none;
   background-color: $accent-color;
+}
+
+.hero__card-image-wrapper {
+  @media (min-width: $desktop-width) {
+    position: absolute;
+    bottom: 156px;
+    right: 120px;
+  }
 }
 
 .hero__card-image {
@@ -132,10 +210,70 @@
 
 .hero__card-about {
   display: none;
+
+  @media (min-width: $desktop-width) {
+    display: block;
+    position: absolute;
+    bottom: 94px;
+  }
+}
+
+.hero__card-time {
+  @media (min-width: $desktop-width) {
+    position: relative;
+    margin-right: 7px;
+    padding: 13px 19px 14px 39px;
+    font-size: 12px;
+    line-height: 16px;
+    font-weight: 400;
+    color: $secondary-text-color;
+    border: 1px solid $hero-card-about-border-color;
+
+    &::before {
+      @include pseudo(12px, 12px);
+
+      bottom: 15px;
+      left: 19px;
+      mask-image: url("/__spritemap#sprite-moon-icon-view");
+      mask-repeat: no-repeat;
+      mask-position: center;
+      background-color: $secondary-text-color;
+    }
+  }
+}
+
+.hero__card-difficult {
+  @media (min-width: $desktop-width) {
+    position: relative;
+    padding: 13px 20px 14px 39px;
+    font-size: 12px;
+    line-height: 16px;
+    font-weight: 400;
+    color: $secondary-text-color;
+    border: 1px solid $hero-card-about-border-color;
+
+    &::before {
+      @include pseudo(12px, 12px);
+
+      bottom: 15px;
+      left: 19px;
+      mask-image: url("/__spritemap#sprite-level-icon-view");
+      mask-repeat: no-repeat;
+      mask-position: center;
+      background-color: $secondary-text-color;
+    }
+  }
 }
 
 .hero__wrapper .hero__pagination {
   bottom: 36px;
+
+  @media (min-width: $desktop-width) {
+    width: 120px;
+    bottom: 88px;
+    right: 110px;
+    left: auto;
+  }
 }
 
 .hero__pagination-bullet {
