@@ -80,6 +80,15 @@
               <h2>Невероятная природа Камчатки</h2>
               <p>Незабываемое приключение, во время которого вы отправитесь в путешествие по одному из самых нетронутых уголков дикой<br> природы в мире.</p>
               <button class="hero__card-button button" type="button">Смотреть тур</button>
+              <div class="hero__card-image-wrapper">
+                <picture>
+                  <source type="image/webp" media="(min-width: 1440px)" srcset="./img/hero/photo-cards-desktop@1x.webp, ./img/hero/photo-cards-desktop@2x.webp 2x" width="410" height="459">
+                  <source type="image/webp" srcset="./img/hero/photo-cards-tablet@1x.webp, ./img/hero/photo-cards-tablet@2x.webp 2x" width="442" height="365">
+
+                  <source type="image/png" media="(min-width: 1440px)" srcset="./img/hero/photo-cards-desktop@1x.png, ./img/hero/photo-cards-desktop@2x.png 2x" width="410" height="459">
+                  <img class="hero__card-image" src="./img/hero/photo-cards-tablet@1x.png" srcset="./img/hero/photo-cards-tablet@2x.png 2x" width="442" height="365" alt="Фотокарточки с наших туров">
+                </picture>
+              </div>
               <div class="hero__card-about">
                 <span class="hero__card-time">9 дней/10 ночей</span>
                 <span class="hero__card-difficult">Средняя сложность</span>

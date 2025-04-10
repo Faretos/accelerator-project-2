@@ -6,6 +6,7 @@ const heroSwiper = new Swiper ('.hero__wrapper', {
 
   direction: 'horizontal',
   loop: true,
+  autoHeight: true,
   slidesPerView: 1,
   spaceBetween: 0,
 
