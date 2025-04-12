@@ -124,33 +124,85 @@
         </div>
         <div class="tours__catalog-wrapper swiper">
           <div class="tours__catalog swiper-wrapper">
-            <div class="tours__card swiper-slide" tabindex="0">
-              <picture>
-                <source type="image/webp" media="(min-width: 1440px)" srcset="./img/tours/elbrus@1x.webp, ./img/tours/elbrus@2x.webp 2x" width="380" height="416">
-                <source type="image/webp" media="(min-width: 768px)" srcset="./img/tours/elbrus@1x.webp, ./img/tours/elbrus@2x.webp 2x" width="330" height="416">
-                <source type="image/webp" srcset="./img/tours/elbrus@1x.webp, ./img/tours/elbrus@2x.webp 2x" width="290" height="416">
-
-                <source type="image/jpg" media="(min-width: 1440px)" srcset="./img/tours/elbrus@1x.jpg, ./img/tours/elbrus@2x.jpg 2x" width="380" height="416">
-                <source type="image/jpg" media="(min-width: 768px)" srcset="./img/tours/elbrus@1x.jpg, ./img/tours/elbrus@2x.jpg 2x" width="330" height="416">
-                <img class="tours__card-image" src="./img/tours/elbrus@1x.jpg" srcset="./img/tours/elbrus@2x.jpg 2x" width="290" height="416" alt="Гора Эльбрус">
-              </picture>
-              <div class="tours__about-first-part-wrapper">
-                <span class="tours__card-place">Кавказ</span>
-                <span class="tours__card-days">4 дня</span>
-                <span class="tours__card-nights">3 ночи</span>
+            <!-- 1 SLIDE -->
+            <div class="tours__card product-card swiper-slide product-card--kavkaz" tabindex="0">
+              <div class="product-card__first-part-wrapper">
+                <span class="product-card__place">Кавказ</span>
+                <span class="product-card__days">4 дня</span>
+                <span class="product-card__nights">3 ночи</span>
               </div>
-              <h3 class="tours__card-title">Путешествие вокруг Эльбруса</h3>
-              <div class="tours__about-second-part-wrapper">
-                <span class="tours__card-difficult-text">Сложность:</span>
-                <span class="tours__card-date-text">Даты набора:</span>
-                <span class="tours__card-date-number">12.06–19.06</span>
-                <span class="tours__card-people-amount-text">Группа:</span>
-                <span class="tours__card-people-amount-number">до 15 чел.</span>
+              <h3 class="product-card__title title-reset">Путешествие<br> вокруг Эльбруса</h3>
+              <div class="product-card__second-part-wrapper">
+                <span class="product-card__difficult-text">Сложность:</span>
+                <svg class="product-card__difficult-icon" width="84" height="16">
+                  <use href="/__spritemap#sprite-four-stars-icon"></use>
+                </svg>
+                <span class="product-card__date-text">Даты набора:</span>
+                <span class="product-card__date-number">12.06–19.06</span>
+                <span class="product-card__people-amount-text">Группа:</span>
+                <span class="product-card__people-amount-number">до 15 чел.</span>
               </div>
-
+            </div>
+            <!-- 2 SLIDE -->
+            <div class="tours__card product-card swiper-slide product-card--altai" tabindex="0">
+              <div class="product-card__first-part-wrapper">
+                <span class="product-card__place">Алтай</span>
+                <span class="product-card__days">14 дней</span>
+                <span class="product-card__nights">13 ночей</span>
+              </div>
+              <h3 class="product-card__title title-reset">Путь к подножию Белухи</h3>
+              <div class="product-card__second-part-wrapper">
+                <span class="product-card__difficult-text">Сложность:</span>
+                <svg class="product-card__difficult-icon" width="84" height="16">
+                  <use href="/__spritemap#sprite-three-stars-icon"></use>
+                </svg>
+                <span class="product-card__date-text">Даты набора:</span>
+                <span class="product-card__date-number">14.06–23.06</span>
+                <span class="product-card__people-amount-text">Группа:</span>
+                <span class="product-card__people-amount-number">до 25 чел.</span>
+              </div>
+            </div>
+            <!-- 3 SLIDE -->
+            <div class="tours__card product-card swiper-slide product-card--adygea" tabindex="0">
+              <div class="product-card__first-part-wrapper">
+                <span class="product-card__place">Адыгея</span>
+                <span class="product-card__days">7 дней</span>
+                <span class="product-card__nights">6 ночей</span>
+              </div>
+              <h3 class="product-card__title title-reset">Через Фишт к Чёрному морю и обратно</h3>
+              <div class="product-card__second-part-wrapper">
+                <span class="product-card__difficult-text">Сложность:</span>
+                <svg class="product-card__difficult-icon" width="84" height="16">
+                  <use href="/__spritemap#sprite-four-stars-icon"></use>
+                </svg>
+                <span class="product-card__date-text">Даты набора:</span>
+                <span class="product-card__date-number">15.07–19.07</span>
+                <span class="product-card__people-amount-text">Группа:</span>
+                <span class="product-card__people-amount-number">до 22 чел.</span>
+              </div>
+            </div>
+            <!-- 4 SLIDE -->
+            <div class="tours__card product-card swiper-slide product-card--ural" tabindex="0">
+              <div class="product-card__first-part-wrapper">
+                <span class="product-card__place">Урал</span>
+                <span class="product-card__days">9 дней</span>
+                <span class="product-card__nights">10 ночей</span>
+              </div>
+              <h3 class="product-card__title title-reset">Восхождение Манарага</h3>
+              <div class="product-card__second-part-wrapper">
+                <span class="product-card__difficult-text">Сложность:</span>
+                <svg class="product-card__difficult-icon" width="84" height="16">
+                  <use href="/__spritemap#sprite-five-stars-icon"></use>
+                </svg>
+                <span class="product-card__date-text">Даты набора:</span>
+                <span class="product-card__date-number">15.07–19.07</span>
+                <span class="product-card__people-amount-text">Группа:</span>
+                <span class="product-card__people-amount-number">до 22 чел.</span>
+              </div>
             </div>
           </div>
         </div>
+        <a class="tours__link" href="#">Показать все туры</a>
       </div>
     </section>
   </main>

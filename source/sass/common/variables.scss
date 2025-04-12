@@ -9,11 +9,16 @@ $desktop-width: 1440px;
 // TEXT COLORS
 $primary-text-color: #2d383f;
 $secondary-text-color: #ffffff;
+$title-shadow-text-color: rgba(45, 56, 63, 0.03);
 
 // BACKGROUND & UI COLORS
+$primary-bg-color: #ffffff;
 $accent-color: #0266c1;
 $hero-card-bg-color: #9cd5f7;
 $hero-card-gradient: linear-gradient(110deg, (rgba(15, 20, 41, 1) 20%, rgba(15, 20, 41, 0) 100%));
 $hero-card-about-border-color: rgba(255, 255, 255, 0.5);
+$product-card-gradient: linear-gradient(to top, (rgba(0, 0, 0, 1) -13%, rgba(0, 0, 0, 0) 60%));
+$product-card-decoration-color: rgba(255, 255, 255, 0.2);
 
 // HOVER,FOCUS,ACTIVE,DISABLED STATES
+$disabled-slider-button: #999999;
