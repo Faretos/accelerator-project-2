@@ -1,16 +1,39 @@
 .tours {
   position: relative;
   background-color: $primary-bg-color;
-  background-image:
-    image-set(
-      url("../../img/clouds/clouds-mobile@1x.webp") type("image/webp") 1x,
-      url("../../img/clouds/clouds-mobile@2x.webp") type("image/webp") 2x,
-      url("../../img/clouds/clouds-mobile@1x.png") type("image/png") 1x,
-      url("../../img/clouds/clouds-mobile@2x.png") type("image/png") 2x,
-    );
-  background-repeat: no-repeat;
-  background-position: right;
-  background-size: contain;
+
+  &::after {
+    @include pseudo(346px, 595px);
+
+    bottom: -10px;
+    right: 0;
+    background-image:
+      image-set(
+        url("../../img/clouds/clouds-mobile@1x.webp") type("image/webp") 1x,
+        url("../../img/clouds/clouds-mobile@2x.webp") type("image/webp") 2x,
+        url("../../img/clouds/clouds-mobile@1x.png") type("image/png") 1x,
+        url("../../img/clouds/clouds-mobile@2x.png") type("image/png") 2x,
+      );
+    background-repeat: no-repeat;
+    background-position: right;
+    background-size: contain;
+  }
+
+  @media (min-width: $tablet-width) {
+    &::after {
+      @include pseudo(602px, 1630px);
+
+      bottom: -10px;
+      right: 0;
+      background-image:
+        image-set(
+          url("../../img/clouds/clouds-tablet@1x.webp") type("image/webp") 1x,
+          url("../../img/clouds/clouds-tablet@2x.webp") type("image/webp") 2x,
+          url("../../img/clouds/clouds-tablet@1x.png") type("image/png") 1x,
+          url("../../img/clouds/clouds-tablet@2x.png") type("image/png") 2x,
+        );
+    }
+  }
 }
 
 .tours__wrapper {
@@ -128,13 +151,14 @@
   margin: 0 0 35px;
 
   @media (min-width: $tablet-width) {
-    margin: 0 0 25px;
+    margin: 0 0 36px;
   }
 }
 
 .tours__link {
   display: block;
   position: relative;
+  z-index: 1;
   width: 192px;
   margin: 0 auto;
   font-family: $primary-font;
