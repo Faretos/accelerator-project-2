@@ -23,7 +23,7 @@
     &::after {
       @include pseudo(602px, 1630px);
 
-      bottom: -10px;
+      bottom: -900px;
       right: 0;
       background-image:
         image-set(
@@ -31,6 +31,22 @@
           url("../../img/clouds/clouds-tablet@2x.webp") type("image/webp") 2x,
           url("../../img/clouds/clouds-tablet@1x.png") type("image/png") 1x,
           url("../../img/clouds/clouds-tablet@2x.png") type("image/png") 2x,
+        );
+    }
+  }
+
+  @media (min-width: $desktop-width) {
+    &::after {
+      @include pseudo(602px, 1630px);
+
+      bottom: -677px;
+      right: 0;
+      background-image:
+        image-set(
+          url("../../img/clouds/clouds-desktop@1x.webp") type("image/webp") 1x,
+          url("../../img/clouds/clouds-desktop@2x.webp") type("image/webp") 2x,
+          url("../../img/clouds/clouds-desktop@1x.png") type("image/png") 1x,
+          url("../../img/clouds/clouds-desktop@2x.png") type("image/png") 2x,
         );
     }
   }
@@ -46,6 +62,11 @@
     width: 768px;
     padding: 60px 45px 50px;
   }
+
+  @media (min-width: $desktop-width) {
+    width: 1440px;
+    padding: 123px 120px;
+  }
 }
 
 .tours__title {
@@ -60,6 +81,12 @@
     margin: 0 0 35px;
     font-size: 25px;
     line-height: 25px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin: 0 0 50px;
+    font-size: 35px;
+    line-height: 35px;
   }
 }
 
@@ -79,71 +106,92 @@
     top: 45px;
     left: 45px;
   }
+
+  @media (min-width: $desktop-width) {
+    font-size: 55px;
+    line-height: 55px;
+    top: 106px;
+    left: 120px;
+  }
 }
 
 .tours__slider-buttons {
   display: none;
 
   @media (min-width: $tablet-width) {
-    display: block;
+    display: flex;
   }
 }
 
 .tours__prev-slide {
-  top: 60px;
-  left: 645px;
-  right: 0;
-  width: 37px;
-  height: 35px;
-  margin: 0;
-  background-color: $accent-color;
+  @media (min-width: $tablet-width) {
+    top: 60px;
+    right: 86px;
+    width: 37px;
+    height: 35px;
+    margin: 0 0 0 auto;
+    background-color: $accent-color;
+    border: none;
 
-  &::before {
-    @include pseudo(13px, 1px);
+    &::before {
+      @include pseudo(13px, 1px);
 
-    top: 50%;
-    left: 12px;
-    transform: translateY(-50%);
-    background-color: $secondary-text-color;
+      top: 50%;
+      left: 12px;
+      transform: translateY(-50%);
+      background-color: $secondary-text-color;
+    }
+
+    &::after {
+      @include pseudo(6px, 6px);
+
+      left: 12px;
+      transform: rotate(225deg);
+      border-top: 1px solid $secondary-text-color;
+      border-right: 1px solid $secondary-text-color;
+      border-radius: 1px;
+    }
   }
 
-  &::after {
-    @include pseudo(6px, 6px);
-
-    left: 12px;
-    transform: rotate(225deg);
-    border-top: 1px solid $secondary-text-color;
-    border-right: 1px solid $secondary-text-color;
-    border-radius: 1px;
+  @media (min-width: $desktop-width) {
+    top: 120px;
+    right: 161px;
   }
 }
 
 .tours__next-slide {
-  top: 60px;
-  left: 686px;
-  right: 0;
-  width: 37px;
-  height: 35px;
-  margin: 0;
-  background-color: $accent-color;
+  @media (min-width: $tablet-width) {
+    top: 60px;
+    right: 45px;
+    width: 37px;
+    height: 35px;
+    margin: 0 0 0 auto;
+    background-color: $accent-color;
+    border: none;
 
-  &::before {
-    @include pseudo(13px, 1px);
+    &::before {
+      @include pseudo(13px, 1px);
 
-    top: 50%;
-    left: 12px;
-    transform: translateY(-50%);
-    background-color: $secondary-text-color;
+      top: 50%;
+      left: 12px;
+      transform: translateY(-50%);
+      background-color: $secondary-text-color;
+    }
+
+    &::after {
+      @include pseudo(6px, 6px);
+
+      right: 12px;
+      transform: rotate(45deg);
+      border-top: 1px solid $secondary-text-color;
+      border-right: 1px solid $secondary-text-color;
+      border-radius: 1px;
+    }
   }
 
-  &::after {
-    @include pseudo(6px, 6px);
-
-    right: 12px;
-    transform: rotate(45deg);
-    border-top: 1px solid $secondary-text-color;
-    border-right: 1px solid $secondary-text-color;
-    border-radius: 1px;
+  @media (min-width: $desktop-width) {
+    top: 120px;
+    right: 120px;
   }
 }
 
@@ -152,6 +200,10 @@
 
   @media (min-width: $tablet-width) {
     margin: 0 0 36px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin: 0 0 64px;
   }
 }
 

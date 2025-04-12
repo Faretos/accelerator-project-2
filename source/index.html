@@ -119,8 +119,12 @@
         <h2 class="tours__title title-reset">Ближайшие туры</h2>
         <span class="tours__title-shadow">Ближайшие туры</span>
         <div class="tours__slider-buttons">
-          <div class="tours__prev-slide swiper-button-prev"></div>
-          <div class="tours__next-slide swiper-button-next"></div>
+          <button class="tours__prev-slide swiper-button-prev" type="button">
+            <span class="visually-hidden">Предыдущий слайд</span>
+          </button>
+          <button class="tours__next-slide swiper-button-next" type="button">
+            <span class="visually-hidden">Следующий слайд</span>
+          </button>
         </div>
         <div class="tours__catalog-wrapper swiper">
           <div class="tours__catalog swiper-wrapper">
@@ -150,7 +154,7 @@
                 <span class="product-card__days">14 дней</span>
                 <span class="product-card__nights">13 ночей</span>
               </div>
-              <h3 class="product-card__title title-reset">Путь к подножию Белухи</h3>
+              <h3 class="product-card__title title-reset">Путь к подножию<br> Белухи</h3>
               <div class="product-card__second-part-wrapper">
                 <span class="product-card__difficult-text">Сложность:</span>
                 <svg class="product-card__difficult-icon" width="84" height="16">
@@ -169,7 +173,7 @@
                 <span class="product-card__days">7 дней</span>
                 <span class="product-card__nights">6 ночей</span>
               </div>
-              <h3 class="product-card__title title-reset">Через Фишт к Чёрному морю и обратно</h3>
+              <h3 class="product-card__title title-reset">Через Фишт<br> к Чёрному морю и обратно</h3>
               <div class="product-card__second-part-wrapper">
                 <span class="product-card__difficult-text">Сложность:</span>
                 <svg class="product-card__difficult-icon" width="84" height="16">
@@ -188,7 +192,7 @@
                 <span class="product-card__days">9 дней</span>
                 <span class="product-card__nights">10 ночей</span>
               </div>
-              <h3 class="product-card__title title-reset">Восхождение Манарага</h3>
+              <h3 class="product-card__title title-reset">Восхождение<br> Манарага</h3>
               <div class="product-card__second-part-wrapper">
                 <span class="product-card__difficult-text">Сложность:</span>
                 <svg class="product-card__difficult-icon" width="84" height="16">
@@ -205,6 +209,149 @@
         <a class="tours__link" href="#">Показать все туры</a>
       </div>
     </section>
+    <!-- TRAINING -->
+    <section class="training" data-test="training">
+      <div class="training__wrapper">
+        <h2 class="training__title title-reset">Обучение</h2>
+        <span class="training__title-shadow">Обучение</span>
+        <p>Обучение проводится квалифицированными специалистами, за плечами которых десятки пройденных маршрутов Кавказа, Крыма, Гималаев, Эльбруса, Алтая, Карелии, Адыгеи и других.</p>
+        <div class="training__slider-buttons">
+          <button class="training__prev-slide swiper-button-prev" type="button">
+            <span class="visually-hidden">Предыдущий слайд</span>
+          </button>
+          <button class="training__next-slide swiper-button-next" type="button">
+            <span class="visually-hidden">Следующий слайд</span>
+          </button>
+        </div>
+        <h3 class="training__instructors-title title-reset">Наши инструкторы</h3>
+        <div class="training__instructors-wrapper swiper">
+          <div class="training__instructors swiper-wrapper">
+            <!-- SLIDE 1 -->
+            <div class="training__instructor-card instructor-card swiper-slide" tabindex="0">
+              <div class="instructor-card__image-wrapper">
+                <picture>
+                  <source type="image/webp" media="(min-width: 1440px)" srcset="./img/training/alexandr-prokofiev@1x.webp, ./img/training/alexandr-prokofiev@2x.webp 2x" width="255" height="200">
+                  <source type="image/webp" media="(min-width: 768px)" srcset="./img/training/alexandr-prokofiev@1x.webp, ./img/training/alexandr-prokofiev@2x.webp 2x" width="183" height="200">
+                  <source type="image/webp" srcset="./img/training/alexandr-prokofiev@1x.webp, ./img/training/alexandr-prokofiev@2x.webp 2x" width="260" height="200">
+
+                  <source type="image/jpg" media="(min-width: 1440px)" srcset="./img/training/alexandr-prokofiev@1x.jpg, ./img/training/alexandr-prokofiev@2x.jpg 2x" width="255" height="200">
+                  <source type="image/jpg" media="(min-width: 768px)" srcset="./img/training/alexandr-prokofiev@1x.jpg, ./img/training/alexandr-prokofiev@2x.jpg 2x" width="183" height="200">
+                  <img class="instructor-card__image" src="./img/training/alexandr-prokofiev@1x.jpg" srcset="./img/training/alexandr-prokofiev@2x.jpg 2x" width="260" height="200" alt="Александр Прокофьев">
+                </picture>
+              </div>
+              <div class="instructor-card__content">
+                <h4>Александр Прокофьев</h4>
+                <a class="instructor-card__link" href="$">
+                  <span class="visually-hidden">Страница VK</span>
+                </a>
+                <p>Строгий и внимательный инструктор, весёлый и общительный человек. Любит природу.</p>
+              </div>
+            </div>
+            <!-- SLIDE 2 -->
+            <div class="training__instructor-card instructor-card swiper-slide" tabindex="0">
+              <div class="instructor-card__image-wrapper">
+                <picture>
+                  <source type="image/webp" media="(min-width: 1440px)" srcset="./img/training/svetlana-afinogenova@1x.webp, ./img/training/svetlana-afinogenova@2x.webp 2x" width="255" height="200">
+                  <source type="image/webp" media="(min-width: 768px)" srcset="./img/training/svetlana-afinogenova@1x.webp, ./img/training/svetlana-afinogenova@2x.webp 2x" width="183" height="200">
+                  <source type="image/webp" srcset="./img/training/svetlana-afinogenova@1x.webp, ./img/training/svetlana-afinogenova@2x.webp 2x" width="260" height="200">
+
+                  <source type="image/jpg" media="(min-width: 1440px)" srcset="./img/training/svetlana-afinogenova@1x.jpg, ./img/training/svetlana-afinogenova@2x.jpg 2x" width="255" height="200">
+                  <source type="image/jpg" media="(min-width: 768px)" srcset="./img/training/svetlana-afinogenova@1x.jpg, ./img/training/svetlana-afinogenova@2x.jpg 2x" width="183" height="200">
+                  <img class="instructor-card__image" src="./img/training/svetlana-afinogenova@1x.jpg" srcset="./img/training/svetlana-afinogenova@2x.jpg 2x" width="260" height="200" alt="Надежда Колисниченко">
+                </picture>
+              </div>
+              <div class="instructor-card__content">
+                <h4>Светлана Афиногенова</h4>
+                <a class="instructor-card__link" href="$">
+                  <span class="visually-hidden">Страница VK</span>
+                </a>
+                <p>Видеть мир вокруг, познавать его опасности, находить друг друга, становиться ближе, чувствовать — в этом назначение жизни.</p>
+              </div>
+            </div>
+            <!-- SLIDE 3 -->
+            <div class="training__instructor-card instructor-card swiper-slide" tabindex="0">
+              <div class="instructor-card__image-wrapper">
+                <picture>
+                  <source type="image/webp" media="(min-width: 1440px)" srcset="./img/training/nadezhda-kolisnichenko@1x.webp, ./img/training/nadezhda-kolisnichenko@2x.webp 2x" width="255" height="200">
+                  <source type="image/webp" media="(min-width: 768px)" srcset="./img/training/nadezhda-kolisnichenko@1x.webp, ./img/training/nadezhda-kolisnichenko@2x.webp 2x" width="183" height="200">
+                  <source type="image/webp" srcset="./img/training/nadezhda-kolisnichenko@1x.webp, ./img/training/nadezhda-kolisnichenko@2x.webp 2x" width="260" height="200">
+
+                  <source type="image/jpg" media="(min-width: 1440px)" srcset="./img/training/nadezhda-kolisnichenko@1x.jpg, ./img/training/nadezhda-kolisnichenko@2x.jpg 2x" width="255" height="200">
+                  <source type="image/jpg" media="(min-width: 768px)" srcset="./img/training/nadezhda-kolisnichenko@1x.jpg, ./img/training/nadezhda-kolisnichenko@2x.jpg 2x" width="183" height="200">
+                  <img class="instructor-card__image" src="./img/training/nadezhda-kolisnichenko@1x.jpg" srcset="./img/training/nadezhda-kolisnichenko@2x.jpg 2x" width="260" height="200" alt="Надежда Колисниченко">
+                </picture>
+              </div>
+              <div class="instructor-card__content">
+                <h4>Надежда Колесниченко</h4>
+                <a class="instructor-card__link" href="$">
+                  <span class="visually-hidden">Страница VK</span>
+                </a>
+                <p>Участники говорят, что Надежда ответственная, приятная в общении, и в поездках с ней чувствуешь себя спокойно и уверенно.</p>
+              </div>
+            </div>
+            <!-- SLIDE 4 -->
+            <div class="training__instructor-card instructor-card swiper-slide" tabindex="0">
+              <div class="instructor-card__image-wrapper">
+                <picture>
+                  <source type="image/webp" media="(min-width: 1440px)" srcset="./img/training/fedor-kaigorodov@1x.webp, ./img/training/fedor-kaigorodov@2x.webp 2x" width="255" height="200">
+                  <source type="image/webp" media="(min-width: 768px)" srcset="./img/training/fedor-kaigorodov@1x.webp, ./img/training/fedor-kaigorodov@2x.webp 2x" width="183" height="200">
+                  <source type="image/webp" srcset="./img/training/fedor-kaigorodov@1x.webp, ./img/training/fedor-kaigorodov@2x.webp 2x" width="260" height="200">
+
+                  <source type="image/jpg" media="(min-width: 1440px)" srcset="./img/training/fedor-kaigorodov@1x.jpg, ./img/training/fedor-kaigorodov@2x.jpg 2x" width="255" height="200">
+                  <source type="image/jpg" media="(min-width: 768px)" srcset="./img/training/fedor-kaigorodov@1x.jpg, ./img/training/fedor-kaigorodov@2x.jpg 2x" width="183" height="200">
+                  <img class="instructor-card__image" src="./img/training/fedor-kaigorodov@1x.jpg" srcset="./img/training/fedor-kaigorodov@2x.jpg 2x" width="260" height="200" alt="Надежда Колисниченко">
+                </picture>
+              </div>
+              <div class="instructor-card__content">
+                <h4>Федор Кайгородов</h4>
+                <a class="instructor-card__link" href="$">
+                  <span class="visually-hidden">Страница VK</span>
+                </a>
+                <p>Опыт походов: Ходит в походы с 2001 года. В России побывал в горных районах Хибины, Архыз, много путешествует по Европе.</p>
+              </div>
+            </div>
+            <!-- SLIDE 5 -->
+            <div class="training__instructor-card instructor-card swiper-slide" tabindex="0">
+              <div class="instructor-card__image-wrapper">
+                <picture>
+                  <source type="image/webp" media="(min-width: 1440px)" srcset="./img/training/daniel-vasnecov@1x.webp, ./img/training/daniel-vasnecov@2x.webp 2x" width="255" height="200">
+                  <source type="image/webp" media="(min-width: 768px)" srcset="./img/training/daniel-vasnecov@1x.webp, ./img/training/daniel-vasnecov@2x.webp 2x" width="183" height="200">
+                  <source type="image/webp" srcset="./img/training/daniel-vasnecov@1x.webp, ./img/training/daniel-vasnecov@2x.webp 2x" width="260" height="200">
+
+                  <source type="image/jpg" media="(min-width: 1440px)" srcset="./img/training/daniel-vasnecov@1x.jpg, ./img/training/daniel-vasnecov@2x.jpg 2x" width="255" height="200">
+                  <source type="image/jpg" media="(min-width: 768px)" srcset="./img/training/daniel-vasnecov@1x.jpg, ./img/training/daniel-vasnecov@2x.jpg 2x" width="183" height="200">
+                  <img class="instructor-card__image" src="./img/training/daniel-vasnecov@1x.jpg" srcset="./img/training/daniel-vasnecov@2x.jpg 2x" width="260" height="200" alt="Надежда Колисниченко">
+                </picture>
+              </div>
+              <div class="instructor-card__content">
+                <h4>Даниэль Васнецов</h4>
+                <a class="instructor-card__link" href="$">
+                  <span class="visually-hidden">Страница VK</span>
+                </a>
+                <p>Покорял самые сложные вершины. Выбирался из под лавин, дружит с медведями и не только.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <section class="training__study-process">
+          <h3 class="training__study-process-title">Процесс обучения</h3>
+          <ul class="training__study-process-list list-style-reset">
+            <li class="training__study-process-item">
+              <p class="training__study-process-text text-offset-reset">Изучение спортивного туристского движения</p>
+            </li>
+            <li class="training__study-process-item">
+              <p class="training__study-process-text text-offset-reset">Подготовка и техническое снаряжение в походах</p>
+            </li>
+            <li class="training__study-process-item">
+              <p class="training__study-process-text text-offset-reset">Лекции по окружающей среде, экологии и гигиене</p>
+            </li>
+            <li class="training__study-process-item">
+              <p class="training__study-process-text text-offset-reset">Разъяснение сложности горных препятствий</p>
+            </li>
+          </ul>
+        </section>
+      </div>
+    </section>
   </main>
   <!-- пример использования спрайта -->
   <!-- <img src="/__spritemap#sprite-logo-view" alt="Это спрайт">
@@ -212,7 +359,6 @@
     <use href="/__spritemap#sprite-user"></use>
   </svg> -->
   <!-- примеры требуемых атрибутов data-test="*" -->
-  <div data-test="training">training</div>
   <div data-test="about">about</div>
   <div data-test="reviews">reviews</div>
   <div data-test="adv">adv</div>

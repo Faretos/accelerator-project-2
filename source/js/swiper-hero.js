@@ -47,11 +47,3 @@ heroSwiper.on('slideChange', () => {
     }
   });
 });
-
-window.addEventListener('resize', () => {
-  if (window.innerWidth < 1440) {
-    heroSwiper.allowTouchMove = true;
-  } else {
-    heroSwiper.allowTouchMove = false;
-  }
-});
