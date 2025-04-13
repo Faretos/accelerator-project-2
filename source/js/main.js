@@ -5,3 +5,4 @@
 import './burger-menu.js';
 import './swiper-hero.js';
 import './swiper-tours.js';
+import './swiper-instructors.js';

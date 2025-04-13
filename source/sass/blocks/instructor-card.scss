@@ -1,0 +1,91 @@
+.instructor-card {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 3px 0;
+  width: 290px;
+  min-height: 356px;
+  padding: 14px 14px 15px;
+  background-color: $primary-bg-color;
+  border: 1px solid $instructor-card-border-color;
+
+  @media (min-width: $tablet-width) {
+    display: block;
+    min-height: 388px;
+    padding: 14px;
+  }
+}
+
+.instructor-card__image-wrapper {
+  grid-column: 1 / 3;
+  grid-row: 1 / 2;
+  height: 200px;
+
+  @media (min-width: $tablet-width) {
+    margin: 0 0 16px;
+  }
+}
+
+.instructor-card__image {
+  display: block;
+  object-fit: cover;
+}
+
+.instructor-card__content {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-column: 1 / 3;
+  grid-row: 2 / 3;
+  gap: 0 0;
+  align-content: space-between;
+
+  @media (min-width: $tablet-width) {
+    gap: 14px 0;
+  }
+}
+
+.instructor-card__content h4 {
+  grid-column: 1 / 2;
+  grid-row: 1 / 2;
+  margin: 0;
+  padding: 0;
+  font-family: $primary-font;
+  font-size: 14px;
+  line-height: 16px;
+  font-weight: 700;
+}
+
+.instructor-card__link {
+  display: block;
+  position: relative;
+  width: 24px;
+  height: 24px;
+  grid-column: 2 / 3;
+  grid-row: 1 / 2;
+  justify-self: flex-end;
+  border: 1px solid rgba(45, 56, 63, 0.3);
+
+  &::before {
+    @include pseudo(15px, 8px);
+
+    top: 6px;
+    left: 3px;
+    mask-image: url("/__spritemap#sprite-vk-icon-view");
+    mask-repeat: no-repeat;
+    mask-position: center;
+    mask-size: 100%;
+
+    background-color: $primary-text-color;
+  }
+}
+
+.instructor-card__content p {
+  grid-column: 1 / 3;
+  grid-row: 2 / 3;
+  margin: 0;
+  padding: 0;
+  font-family: $primary-font;
+  font-size: 12px;
+  line-height: 16px;
+  font-weight: 400;
+  color: $primary-text-color;
+}

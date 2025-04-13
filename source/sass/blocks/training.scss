@@ -1,0 +1,368 @@
+.training {
+  background-color: $primary-bg-color;
+}
+
+.training__wrapper {
+  position: relative;
+  width: 320px;
+  margin: 0 auto;
+  padding: 37px 15px 20px;
+
+  @media (min-width: $tablet-width) {
+    width: 768px;
+    padding: 59px 45px 40px;
+  }
+}
+
+.training__title {
+  margin: 0 0 33px;
+  font-family: $primary-font;
+  font-size: 22px;
+  line-height: 22px;
+  font-weight: 800;
+  color: $primary-text-color;
+
+  @media (min-width: $tablet-width) {
+    margin: 0 0 34px;
+    font-size: 25px;
+    line-height: 25px;
+  }
+}
+
+.training__title-shadow {
+  position: absolute;
+  top: 20px;
+  left: 15px;
+  font-family: $primary-font;
+  font-size: 26px;
+  line-height: 26px;
+  font-weight: 800;
+  color: $title-shadow-text-color;
+
+  @media (min-width: $tablet-width) {
+    font-size: 40px;
+    line-height: 40px;
+    top: 44px;
+    left: 45px;
+  }
+}
+
+.training__wrapper p {
+  margin: 0 0 29px;
+  font-family: $primary-font;
+  font-size: 14px;
+  line-height: 20px;
+  font-weight: 400;
+
+  @media (min-width: $tablet-width) {
+    margin: 0 0 30px;
+    font-size: 16px;
+    line-height: 24px;
+  }
+}
+
+.training__wrapper p br {
+  display: none;
+
+  @media (min-width: $tablet-width) {
+    display: block;
+  }
+
+  @media (min-width: $desktop-width) {
+    display: none;
+  }
+}
+
+.training__slider-buttons {
+  display: none;
+
+  @media (min-width: $tablet-width) {
+    display: flex;
+    position: relative;
+  }
+}
+
+.training__prev-slide {
+  @media (min-width: $tablet-width) {
+    top: -3px;
+    right: 41px;
+    width: 37px;
+    height: 35px;
+    margin: 0 0 0 auto;
+    background-color: $accent-color;
+    border: none;
+
+    &::before {
+      @include pseudo(13px, 1px);
+
+      top: 50%;
+      left: 12px;
+      transform: translateY(-50%);
+      background-color: $secondary-text-color;
+    }
+
+    &::after {
+      @include pseudo(6px, 6px);
+
+      left: 12px;
+      transform: rotate(225deg);
+      border-top: 1px solid $secondary-text-color;
+      border-right: 1px solid $secondary-text-color;
+      border-radius: 1px;
+    }
+  }
+}
+
+.training__next-slide {
+  @media (min-width: $tablet-width) {
+    top: -3px;
+    right: 0;
+    width: 37px;
+    height: 35px;
+    margin: 0 0 0 auto;
+    background-color: $accent-color;
+    border: none;
+
+    &::before {
+      @include pseudo(13px, 1px);
+
+      top: 50%;
+      left: 12px;
+      transform: translateY(-50%);
+      background-color: $secondary-text-color;
+    }
+
+    &::after {
+      @include pseudo(6px, 6px);
+
+      right: 12px;
+      transform: rotate(45deg);
+      border-top: 1px solid $secondary-text-color;
+      border-right: 1px solid $secondary-text-color;
+      border-radius: 1px;
+    }
+  }
+}
+
+.training__instructors-title {
+  margin: 0 0 22px;
+  font-family: $primary-font;
+  font-size: 22px;
+  line-height: 22px;
+  font-weight: 800;
+  color: $primary-text-color;
+
+  @media (min-width: $tablet-width) {
+    margin: 0 0 37px;
+    font-size: 25px;
+    line-height: 25px;
+  }
+}
+
+.training__study-process {
+  padding: 26px 0 0;
+
+  @media (min-width: $tablet-width) {
+    padding: 27px 0 0;
+  }
+}
+
+.training__study-process-title {
+  margin: 0 0 23px;
+  font-family: $primary-font;
+  font-size: 16px;
+  line-height: 16px;
+  font-weight: 700;
+  color: $primary-text-color;
+
+  @media (min-width: $tablet-width) {
+    margin: 0 0 100px;
+    font-size: 18px;
+    line-height: 18px;
+  }
+}
+
+.training__study-process-list {
+  position: relative;
+
+  &::before {
+    @include pseudo(2px, calc(100% - 36px));
+
+    top: 12px;
+    left: 6px;
+    background-color: $accent-color;
+  }
+
+  @media (min-width: $tablet-width) {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 104px 134px;
+    justify-content: space-between;
+
+    &::before {
+      display: none;
+    }
+  }
+}
+
+.training__study-process-item {
+  position: relative;
+
+  &::after {
+    @include pseudo(14px, 14px);
+
+    top: 12px;
+    left: 0;
+    border-radius: 50%;
+    background-color: $accent-color;
+  }
+
+  @media (min-width: $tablet-width) {
+    &::after {
+      display: none;
+    }
+  }
+}
+
+.training__study-process-item:not(:last-child) {
+  margin: 0 0 25px;
+
+  @media (min-width: $tablet-width) {
+    margin: 0;
+  }
+}
+
+.training__study-process-item--map {
+  width: 228px;
+
+  &::before {
+    @include pseudo(25px, 25px);
+
+    top: 1px;
+    left: 29px;
+    mask-image: url("/__spritemap#sprite-map-icon-view");
+    mask-repeat: no-repeat;
+    mask-position: center;
+    mask-size: 100%;
+
+    background-color: $primary-text-color;
+  }
+
+  @media (min-width: $tablet-width) {
+    width: 208px;
+    grid-column: 1 / 2;
+    grid-row: 1 / 2;
+
+    &::before {
+      top: 2px;
+      left: 0;
+    }
+  }
+}
+
+.training__study-process-item--boot {
+  width: 250px;
+
+  &::before {
+    @include pseudo(25px, 25px);
+
+    top: 1px;
+    left: 29px;
+    mask-image: url("/__spritemap#sprite-boot-icon-view");
+    mask-repeat: no-repeat;
+    mask-position: center;
+    mask-size: 100%;
+
+    background-color: $primary-text-color;
+  }
+
+  @media (min-width: $tablet-width) {
+    width: 232px;
+    grid-column: 1 / 2;
+    grid-row: 2 / 3;
+
+    &::before {
+      top: 2px;
+      left: 0;
+    }
+  }
+}
+
+.training__study-process-item--trees {
+  width: 274px;
+
+  &::before {
+    @include pseudo(25px, 25px);
+
+    top: 1px;
+    left: 29px;
+    mask-image: url("/__spritemap#sprite-pine-tree-icon-view");
+    mask-repeat: no-repeat;
+    mask-position: center;
+    mask-size: 100%;
+
+    background-color: $primary-text-color;
+  }
+
+  @media (min-width: $tablet-width) {
+    grid-column: 2 / 3;
+    grid-row: 2 / 3;
+    width: 231px;
+
+    &::before {
+      top: 2px;
+      left: 0;
+    }
+  }
+}
+
+.training__study-process-item--mountains {
+  width: 235px;
+
+  &::before {
+    @include pseudo(25px, 25px);
+
+    top: 1px;
+    left: 28px;
+    mask-image: url("/__spritemap#sprite-mountain-icon-view");
+    mask-repeat: no-repeat;
+    mask-position: center;
+    mask-size: 100%;
+
+    background-color: $primary-text-color;
+  }
+
+  @media (min-width: $tablet-width) {
+    width: 272px;
+    grid-column: 2 / 3;
+    grid-row: 1 / 2;
+
+    &::before {
+      top: 2px;
+      left: 0;
+    }
+  }
+}
+
+.training__study-process-item .training__study-process-text {
+  margin: 0;
+  padding: 0 0 0 63px;
+  font-family: $primary-font;
+  font-size: 12px;
+  line-height: 18px;
+  font-weight: 400;
+  color: $primary-text-color;
+
+  @media (min-width: $tablet-width) {
+    padding: 0 0 0 35px;
+    font-size: 14px;
+    line-height: 22px;
+  }
+}
+
+.training__prev-slide.disabled,
+.training__next-slide.disabled {
+  pointer-events: none;
+  opacity: 1;
+  background-color: $disabled-slider-button;
+}
