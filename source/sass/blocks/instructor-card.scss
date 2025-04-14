@@ -13,6 +13,11 @@
     min-height: 388px;
     padding: 14px;
   }
+
+  @media (min-width: $desktop-width) {
+    width: 285px;
+    min-height: 356px;
+  }
 }
 
 .instructor-card__image-wrapper {

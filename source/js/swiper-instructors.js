@@ -23,8 +23,8 @@ const toursSwiper = new Swiper ('.training__instructors-wrapper', {
       initialSlide: 0,
     },
     1440: {
-      slidesPerView: 3,
-      spaceBetween: 30,
+      slidesPerView: 4,
+      spaceBetween: 20,
       initialSlide: 0,
     },
   },

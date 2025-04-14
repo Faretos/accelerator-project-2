@@ -1,0 +1,209 @@
+.about {
+  position: relative;
+
+  &::before {
+    @include pseudo(100%, 400px);
+
+    top: 20px;
+    left: 0;
+    overflow-x: hidden;
+    background-image:
+      image-set(
+        url("../../img/about/rock-climbers-mobile@1x.webp") type("image/webp") 1x,
+        url("../../img/about/rock-climbers-mobile@2x.webp") type("image/webp") 2x,
+        url("../../img/about/rock-climbers-mobile@1x.png") type("image/png") 1x,
+        url("../../img/about/rock-climbers-mobile@1x.png") type("image/png") 2x,
+      );
+    background-repeat: no-repeat;
+    background-position: left;
+    background-size: cover;
+    transition: width 0.6s ease, height 0.6s ease;
+  }
+
+  @media (width >= 321px) {
+    &::before {
+      background-image:
+        image-set(
+          url("../../img/about/rock-climbers-tablet@1x.webp") type("image/webp") 1x,
+          url("../../img/about/rock-climbers-tablet@2x.webp") type("image/webp") 2x,
+          url("../../img/about/rock-climbers-tablet@1x.png") type("image/png") 1x,
+          url("../../img/about/rock-climbers-tablet@1x.png") type("image/png") 2x,
+        );
+    }
+  }
+
+  @media (width >= 620px) {
+    &::before {
+      background-size: contain;
+    }
+  }
+
+  @media (min-width: $tablet-width) {
+    &::before {
+      top: 176px;
+      left: 0;
+      width: 542px;
+      height: 350px;
+      background-size: cover;
+    }
+  }
+
+  @media (min-width: $desktop-width) {
+    min-height: 698px;
+
+    &::before {
+      top: 99px;
+      left: 0;
+      width: 660px;
+      height: 498px;
+      background-image:
+        image-set(
+          url("../../img/about/rock-climbers-desktop@1x.webp") type("image/webp") 1x,
+          url("../../img/about/rock-climbers-desktop@2x.webp") type("image/webp") 2x,
+          url("../../img/about/rock-climbers-desktop@1x.png") type("image/png") 1x,
+          url("../../img/about/rock-climbers-desktop@1x.png") type("image/png") 2x,
+        );
+    }
+  }
+}
+
+.about__wrapper {
+  position: relative;
+  width: 320px;
+  margin: 0 auto;
+  padding: 437px 15px 20px;
+  text-align: left;
+  transition: padding 0.6s ease;
+
+  @media (width >= 321px) {
+    padding: 487px 15px 20px;
+  }
+
+  @media (min-width: $tablet-width) {
+    width: 768px;
+    padding: 60px 45px 40px 450px;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 1440px;
+    padding: 144px 120px 100px 660px;
+  }
+}
+
+.about__wrapper h2 {
+  margin: 0 0 42px;
+  padding: 0;
+  font-family: $primary-font;
+  font-size: 22px;
+  line-height: 22px;
+  font-weight: 800;
+  color: $primary-text-color;
+
+  @media (min-width: $tablet-width) {
+    margin: 0 0 48px;
+    font-size: 25px;
+    line-height: 25px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin: 0 0 59px;
+    font-size: 35px;
+    line-height: 35px;
+  }
+}
+
+.about__wrapper span {
+  position: absolute;
+  top: 424px;
+  left: 15px;
+  font-family: $primary-font;
+  font-size: 26px;
+  line-height: 26px;
+  font-weight: 800;
+  color: $title-shadow-text-color;
+  transition: top 0.6s ease;
+
+  @media (width >= 321px) {
+    top: 473px;
+  }
+
+  @media (min-width: $tablet-width) {
+    font-size: 40px;
+    line-height: 40px;
+    top: 49px;
+    left: auto;
+    right: 196px;
+  }
+
+  @media (min-width: $desktop-width) {
+    font-size: 55px;
+    line-height: 55px;
+    top: 106px;
+    right: 612px;
+  }
+}
+
+.about__text-item {
+  width: 290px;
+
+  @media (min-width: $tablet-width) {
+    width: 270px;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 585px;
+  }
+}
+
+.about__text-item:not(:last-child) {
+  margin: 0 0 27px;
+
+  @media (min-width: $tablet-width) {
+    margin: 0 0 29px;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 570px;
+  }
+}
+
+.about__text-list .about__text-item h3 {
+  margin: 0 0 13px;
+  padding: 0;
+  font-family: $primary-font;
+  font-size: 16px;
+  line-height: 16px;
+  font-weight: 700;
+  color: $primary-text-color;
+
+  @media (min-width: $tablet-width) {
+    margin: 0 0 11px;
+    font-size: 18px;
+    line-height: 18px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin: 0 0 16px;
+    font-size: 21px;
+    line-height: 21px;
+  }
+}
+
+.about__text-list .about__text-item p {
+  margin: 0;
+  padding: 0;
+  font-family: $primary-font;
+  font-size: 14px;
+  line-height: 20px;
+  color: $primary-text-color;
+
+  @media (min-width: $tablet-width) {
+    font-size: 16px;
+    line-height: 24px;
+  }
+
+  @media (min-width: $desktop-width) {
+    font-size: 14px;
+    line-height: 22px;
+  }
+}

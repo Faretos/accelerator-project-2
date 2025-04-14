@@ -39,7 +39,7 @@
     &::after {
       @include pseudo(602px, 1630px);
 
-      bottom: -677px;
+      bottom: -690px;
       right: 0;
       background-image:
         image-set(
@@ -65,7 +65,7 @@
 
   @media (min-width: $desktop-width) {
     width: 1440px;
-    padding: 123px 120px;
+    padding: 123px 120px 110px;
   }
 }
 

@@ -6,11 +6,16 @@
   position: relative;
   width: 320px;
   margin: 0 auto;
-  padding: 37px 15px 20px;
+  padding: 37px 15px 21px;
 
   @media (min-width: $tablet-width) {
     width: 768px;
-    padding: 59px 45px 40px;
+    padding: 59px 45px 42px;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 1440px;
+    padding: 62px 120px 65px;
   }
 }
 
@@ -26,6 +31,12 @@
     margin: 0 0 34px;
     font-size: 25px;
     line-height: 25px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin: 0 0 32px;
+    font-size: 35px;
+    line-height: 35px;
   }
 }
 
@@ -45,6 +56,13 @@
     top: 44px;
     left: 45px;
   }
+
+  @media (min-width: $desktop-width) {
+    font-size: 55px;
+    line-height: 55px;
+    top: 45px;
+    left: 120px;
+  }
 }
 
 .training__wrapper p {
@@ -56,6 +74,13 @@
 
   @media (min-width: $tablet-width) {
     margin: 0 0 30px;
+    font-size: 16px;
+    line-height: 24px;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 820px;
+    margin: 0 0 62px;
     font-size: 16px;
     line-height: 24px;
   }
@@ -111,6 +136,10 @@
       border-radius: 1px;
     }
   }
+
+  @media (min-width: $desktop-width) {
+    top: -4px;
+  }
 }
 
 .training__next-slide {
@@ -142,6 +171,10 @@
       border-radius: 1px;
     }
   }
+
+  @media (min-width: $desktop-width) {
+    top: -4px;
+  }
 }
 
 .training__instructors-title {
@@ -157,13 +190,61 @@
     font-size: 25px;
     line-height: 25px;
   }
+
+  @media (min-width: $desktop-width) {
+    margin: 0 0 16px;
+    font-size: 35px;
+    line-height: 35px;
+  }
+}
+
+.training__instructors .training__instructor-card p {
+  @media (min-width: $desktop-width) {
+    width: 255px;
+  }
 }
 
 .training__study-process {
+  position: relative;
   padding: 26px 0 0;
 
   @media (min-width: $tablet-width) {
     padding: 27px 0 0;
+
+    &::before {
+      @include pseudo(840px, 280px);
+
+      top: -60px;
+      right: -45px;
+      background-image:
+        image-set(
+          url("../../img/clouds/second-clouds-tablet@1x.webp") type("image/webp") 1x,
+          url("../../img/clouds/second-clouds-tablet@2x.webp") type("image/webp") 2x,
+          url("../../img/clouds/second-clouds-tablet@1x.png") type("image/png") 1x,
+          url("../../img/clouds/second-clouds-tablet@2x.png") type("image/png") 2x,
+        );
+      background-repeat: no-repeat;
+      background-position: right;
+      background-size: contain;
+    }
+  }
+
+  @media (min-width: $desktop-width) {
+    padding: 58px 0 0;
+
+    &::before {
+      @include pseudo(840px, 280px);
+
+      top: -35px;
+      right: -120px;
+      background-image:
+        image-set(
+          url("../../img/clouds/second-clouds-desktop@1x.webp") type("image/webp") 1x,
+          url("../../img/clouds/second-clouds-desktop@2x.webp") type("image/webp") 2x,
+          url("../../img/clouds/second-clouds-desktop@1x.png") type("image/png") 1x,
+          url("../../img/clouds/second-clouds-desktop@2x.png") type("image/png") 2x,
+        );
+    }
   }
 }
 
@@ -180,6 +261,12 @@
     font-size: 18px;
     line-height: 18px;
   }
+
+  @media (min-width: $desktop-width) {
+    margin: 0 0 27px;
+    font-size: 21px;
+    line-height: 21px;
+  }
 }
 
 .training__study-process-list {
@@ -195,12 +282,26 @@
 
   @media (min-width: $tablet-width) {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 104px 134px;
-    justify-content: space-between;
+    grid-template-columns: repeat(2, 208px);
+    gap: 104px 198px;
 
     &::before {
       display: none;
+    }
+  }
+
+  @media (min-width: $desktop-width) {
+    grid-template-columns: repeat(4, 253px);
+    gap: 0 0;
+    justify-content: start;
+
+    &::before {
+      display: block;
+      top: auto;
+      left: 20px;
+      bottom: -10px;
+      width: calc(100% - 20px);
+      height: 2px;
     }
   }
 }
@@ -220,6 +321,14 @@
   @media (min-width: $tablet-width) {
     &::after {
       display: none;
+    }
+  }
+
+  @media (min-width: $desktop-width) {
+    &::after {
+      display: block;
+      top: auto;
+      bottom: -16px;
     }
   }
 }
@@ -258,6 +367,20 @@
       left: 0;
     }
   }
+
+  @media (min-width: $desktop-width) {
+    width: 253px;
+    grid-column: 1 / 2;
+    grid-row: 1 / 2;
+
+    &::before {
+      left: 10px;
+    }
+
+    &::after {
+      left: 20px;
+    }
+  }
 }
 
 .training__study-process-item--boot {
@@ -284,6 +407,20 @@
     &::before {
       top: 2px;
       left: 0;
+    }
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 253px;
+    grid-column: 2 / 3;
+    grid-row: 1 / 2;
+
+    &::before {
+      left: 10px;
+    }
+
+    &::after {
+      left: 20px;
     }
   }
 }
@@ -314,6 +451,20 @@
       left: 0;
     }
   }
+
+  @media (min-width: $desktop-width) {
+    width: 253px;
+    grid-column: 3 / 4;
+    grid-row: 1 / 2;
+
+    &::before {
+      left: 10px;
+    }
+
+    &::after {
+      left: 1px;
+    }
+  }
 }
 
 .training__study-process-item--mountains {
@@ -342,6 +493,20 @@
       left: 0;
     }
   }
+
+  @media (min-width: $desktop-width) {
+    width: 253px;
+    grid-column: 4 / 5;
+    grid-row: 1 / 2;
+
+    &::before {
+      left: 10px;
+    }
+
+    &::after {
+      left: 21px;
+    }
+  }
 }
 
 .training__study-process-item .training__study-process-text {
@@ -357,6 +522,13 @@
     padding: 0 0 0 35px;
     font-size: 14px;
     line-height: 22px;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 240px;
+    padding: 0 0 0 45px;
+    font-size: 16px;
+    line-height: 24px;
   }
 }
 
