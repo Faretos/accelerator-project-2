@@ -1,7 +1,7 @@
 import Swiper from 'swiper';
 import {Navigation} from 'swiper/modules';
 
-const toursSwiper = new Swiper ('.training__instructors-wrapper', {
+const instructorsSwiper = new Swiper ('.training__instructors-wrapper', {
   modules: [Navigation],
 
   direction: 'horizontal',
@@ -34,21 +34,21 @@ const prevSlide = document.querySelector('.training__prev-slide');
 const nextSlide = document.querySelector('.training__next-slide');
 
 function isUpdateNavigation () {
-  if (toursSwiper.isBeginning) {
+  if (instructorsSwiper.isBeginning) {
     prevSlide.classList.add('disabled');
   } else {
     prevSlide.classList.remove('disabled');
   }
 
-  if (toursSwiper.isEnd) {
+  if (instructorsSwiper.isEnd) {
     nextSlide.classList.add('disabled');
   } else {
     nextSlide.classList.remove('disabled');
   }
 }
 
-toursSwiper.on('init', isUpdateNavigation);
-toursSwiper.on('slideChange', isUpdateNavigation);
+instructorsSwiper.on('init', isUpdateNavigation);
+instructorsSwiper.on('slideChange', isUpdateNavigation);
 
-toursSwiper.init();
+instructorsSwiper.init();
 isUpdateNavigation();

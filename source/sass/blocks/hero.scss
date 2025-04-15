@@ -1,3 +1,7 @@
+.hero__wrapper {
+  z-index: 2;
+}
+
 .hero__card {
   @include flex (column, space-around, center);
 

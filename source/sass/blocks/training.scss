@@ -1,9 +1,46 @@
 .training {
+  position: relative;
   background-color: $primary-bg-color;
+
+  @media (min-width: $tablet-width) {
+    &::before {
+      @include pseudo(840px, 280px);
+
+      top: 610px;
+      right: 0;
+      z-index: 1;
+      background-image:
+        image-set(
+          url("../../img/clouds/second-clouds-tablet@1x.webp") type("image/webp") 1x,
+          url("../../img/clouds/second-clouds-tablet@2x.webp") type("image/webp") 2x,
+          url("../../img/clouds/second-clouds-tablet@1x.png") type("image/png") 1x,
+          url("../../img/clouds/second-clouds-tablet@2x.png") type("image/png") 2x,
+        );
+      background-repeat: no-repeat;
+      background-position: right;
+      background-size: contain;
+    }
+  }
+
+  @media (min-width: $desktop-width) {
+    &::before {
+      @include pseudo(840px, 280px);
+
+      top: 612px;
+      background-image:
+        image-set(
+          url("../../img/clouds/second-clouds-desktop@1x.webp") type("image/webp") 1x,
+          url("../../img/clouds/second-clouds-desktop@2x.webp") type("image/webp") 2x,
+          url("../../img/clouds/second-clouds-desktop@1x.png") type("image/png") 1x,
+          url("../../img/clouds/second-clouds-desktop@2x.png") type("image/png") 2x,
+        );
+    }
+  }
 }
 
 .training__wrapper {
   position: relative;
+  z-index: 2;
   width: 320px;
   margin: 0 auto;
   padding: 37px 15px 21px;
@@ -210,41 +247,10 @@
 
   @media (min-width: $tablet-width) {
     padding: 27px 0 0;
-
-    &::before {
-      @include pseudo(840px, 280px);
-
-      top: -60px;
-      right: -45px;
-      background-image:
-        image-set(
-          url("../../img/clouds/second-clouds-tablet@1x.webp") type("image/webp") 1x,
-          url("../../img/clouds/second-clouds-tablet@2x.webp") type("image/webp") 2x,
-          url("../../img/clouds/second-clouds-tablet@1x.png") type("image/png") 1x,
-          url("../../img/clouds/second-clouds-tablet@2x.png") type("image/png") 2x,
-        );
-      background-repeat: no-repeat;
-      background-position: right;
-      background-size: contain;
-    }
   }
 
   @media (min-width: $desktop-width) {
     padding: 58px 0 0;
-
-    &::before {
-      @include pseudo(840px, 280px);
-
-      top: -35px;
-      right: -120px;
-      background-image:
-        image-set(
-          url("../../img/clouds/second-clouds-desktop@1x.webp") type("image/webp") 1x,
-          url("../../img/clouds/second-clouds-desktop@2x.webp") type("image/webp") 2x,
-          url("../../img/clouds/second-clouds-desktop@1x.png") type("image/png") 1x,
-          url("../../img/clouds/second-clouds-desktop@2x.png") type("image/png") 2x,
-        );
-    }
   }
 }
 

@@ -40,7 +40,7 @@
 
   @media (min-width: $tablet-width) {
     &::before {
-      top: 176px;
+      top: 174px;
       left: 0;
       width: 542px;
       height: 350px;
@@ -69,9 +69,10 @@
 
 .about__wrapper {
   position: relative;
+  z-index: 2;
   width: 320px;
   margin: 0 auto;
-  padding: 437px 15px 20px;
+  padding: 437px 15px 21px;
   text-align: left;
   transition: padding 0.6s ease;
 
@@ -130,7 +131,7 @@
   @media (min-width: $tablet-width) {
     font-size: 40px;
     line-height: 40px;
-    top: 49px;
+    top: 45px;
     left: auto;
     right: 196px;
   }
