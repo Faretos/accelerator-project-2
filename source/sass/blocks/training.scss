@@ -538,8 +538,7 @@
   }
 }
 
-.training__prev-slide.disabled,
-.training__next-slide.disabled {
+.training__slider-buttons .swiper-button-disabled {
   pointer-events: none;
   opacity: 1;
   background-color: $disabled-slider-button;

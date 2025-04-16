@@ -30,25 +30,4 @@ const instructorsSwiper = new Swiper ('.training__instructors-wrapper', {
   },
 });
 
-const prevSlide = document.querySelector('.training__prev-slide');
-const nextSlide = document.querySelector('.training__next-slide');
-
-function isUpdateNavigation () {
-  if (instructorsSwiper.isBeginning) {
-    prevSlide.classList.add('disabled');
-  } else {
-    prevSlide.classList.remove('disabled');
-  }
-
-  if (instructorsSwiper.isEnd) {
-    nextSlide.classList.add('disabled');
-  } else {
-    nextSlide.classList.remove('disabled');
-  }
-}
-
-instructorsSwiper.on('init', isUpdateNavigation);
-instructorsSwiper.on('slideChange', isUpdateNavigation);
-
 instructorsSwiper.init();
-isUpdateNavigation();

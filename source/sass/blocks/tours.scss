@@ -241,8 +241,7 @@
   }
 }
 
-.tours__prev-slide.disabled,
-.tours__next-slide.disabled {
+.tours__slider-buttons .swiper-button-disabled {
   pointer-events: none;
   opacity: 1;
   background-color: $disabled-slider-button;
