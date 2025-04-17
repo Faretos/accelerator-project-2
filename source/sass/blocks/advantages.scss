@@ -1,0 +1,163 @@
+.advantages__wrapper {
+  position: relative;
+  width: 320px;
+  padding: 37px 0 20px;
+  text-align: center;
+}
+
+.advantages__title {
+  margin: 0 0 36px;
+  font-family: $primary-font;
+  font-size: 22px;
+  line-height: 22px;
+  font-weight: 800;
+  color: $primary-text-color;
+}
+
+.advantages__title-shadow {
+  position: absolute;
+  top: 23px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-family: $primary-font;
+  font-size: 26px;
+  line-height: 26px;
+  font-weight: 800;
+  color: $title-shadow-text-color;
+}
+
+.advantages__list {
+  padding: 0 15px;
+}
+
+.advantages__card {
+  position: relative;
+  padding: 81px 9px 19px;
+  border: 1px solid $instructor-card-border-color;
+
+  &::after {
+    @include pseudo(42px, 42px);
+
+    top: 19px;
+    left: 50%;
+    transform: translateX(-50%);
+    border: 1px solid $accent-color;
+  }
+
+  &--duplicate {
+    display: none;
+  }
+}
+
+.advantages__card--shield {
+  &::before {
+    @include pseudo(22px, 22px);
+
+    top: 29px;
+    left: 50%;
+    transform: translateX(-50%);
+    mask-image: url("/__spritemap#sprite-shield-icon-view");
+    mask-repeat: no-repeat;
+    mask-position: center;
+    mask-size: 100%;
+    background-color: $accent-color;
+  }
+}
+
+.advantages__card--crown {
+  &::before {
+    @include pseudo(24px, 24px);
+
+    top: 28px;
+    left: 50%;
+    transform: translateX(-50%);
+    mask-image: url("/__spritemap#sprite-crown-icon-view");
+    mask-repeat: no-repeat;
+    mask-position: center;
+    mask-size: 100%;
+    background-color: $accent-color;
+  }
+}
+
+.advantages__card--boot {
+  &::before {
+    @include pseudo(22px, 22px);
+
+    top: 29px;
+    left: 50%;
+    transform: translateX(-50%);
+    mask-image: url("/__spritemap#sprite-boot-icon-view");
+    mask-repeat: no-repeat;
+    mask-position: center;
+    mask-size: 100%;
+    background-color: $accent-color;
+  }
+}
+
+.advantages__card--path {
+  &::before {
+    @include pseudo(24px, 24px);
+
+    top: 28px;
+    left: 50%;
+    transform: translateX(-50%);
+    mask-image: url("/__spritemap#sprite-path-icon-view");
+    mask-repeat: no-repeat;
+    mask-position: center;
+    mask-size: 100%;
+    background-color: $accent-color;
+  }
+}
+
+.advantages__card--leaf {
+  &::before {
+    @include pseudo(24px, 24px);
+
+    top: 28px;
+    left: 50%;
+    transform: translateX(-50%);
+    mask-image: url("/__spritemap#sprite-leaf-icon-view");
+    mask-repeat: no-repeat;
+    mask-position: center;
+    mask-size: 100%;
+    background-color: $accent-color;
+  }
+}
+
+.advantages__card:not(:last-child) {
+  margin: 0 0 15px;
+}
+
+.advantages__card h3 {
+  margin: 0 auto 15px;
+  padding: 0;
+  font-family: $primary-font;
+  font-size: 14px;
+  line-height: 14px;
+  font-weight: 600;
+  color: $primary-text-color;
+}
+
+.advantages__card--leaf h3 {
+  width: 175px;
+  padding: 0 2px 0 0;
+}
+
+.advantages__card p {
+  min-width: 270px;
+  margin: 0;
+  padding: 0;
+  font-family: $primary-font;
+  font-size: 12px;
+  line-height: 18px;
+  font-weight: 400;
+  color: $primary-text-color;
+}
+
+.advantages__slider-buttons {
+  display: none;
+
+  @media (min-width: $desktop-width) {
+    display: block;
+  }
+}

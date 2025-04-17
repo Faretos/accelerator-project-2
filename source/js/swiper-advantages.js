@@ -1,0 +1,48 @@
+import Swiper from 'swiper';
+import {Navigation} from 'swiper/modules';
+
+const advantagesList = document.querySelector('.advantages__list');
+const advantagesListWrapper = document.querySelector('.advantages__list-wrapper');
+const advantagesCard = document.querySelectorAll('.advantages__card');
+let advantagesSwiper = null;
+
+function addSwiper () {
+  if (window.innerWidth >= 1440) {
+    advantagesList.classList.add('swiper-wrapper');
+    advantagesListWrapper.classList.add('swiper');
+    advantagesCard.forEach((card) => card.classList.add('swiper-slide'));
+
+    if (!advantagesSwiper) {
+      advantagesSwiper = new Swiper ('.advantages__list-wrapper', {
+        modules: [Navigation],
+
+        direction: 'horizontal',
+        autoHeight: true,
+        loop: true,
+        slidesPerView: 3,
+        slidesPerGroup: 2,
+        spaceBetween: 30,
+        navigation: {
+          nextEl: '.advantages__next-slide',
+          prevEl: '.advantages__prev-slide',
+        },
+        // allowTouchMove: window.innerWidth < 1440,
+      });
+    }
+  } else {
+    if (advantagesSwiper) {
+      if (advantagesSwiper) {
+        advantagesSwiper.destroy(true, true);
+        advantagesSwiper = null;
+      }
+      advantagesList.classList.remove('swiper-wrapper');
+      advantagesListWrapper.classList.remove('swiper');
+      advantagesCard.forEach((card) => card.classList.remove('swiper-slide'));
+    }
+  }
+}
+
+window.addEventListener('load', addSwiper);
+window.addEventListener('resize', () => {
+  addSwiper();
+});

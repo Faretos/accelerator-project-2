@@ -7,3 +7,4 @@ import './swiper-hero.js';
 import './swiper-tours.js';
 import './swiper-instructors.js';
 import './swiper-reviews.js';
+import './swiper-advantages.js';
