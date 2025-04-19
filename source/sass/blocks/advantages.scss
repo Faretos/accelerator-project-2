@@ -141,16 +141,9 @@
   }
 }
 
-.advantages__list-swiper-wrap {
-  @media (min-width: $desktop-width) {
-    width: 100%;
-    overflow: hidden;
-  }
-}
-
 .advantages__list-wrapper {
   @media (min-width: $desktop-width) {
-    overflow: visible;
+    position: static;
   }
 }
 
@@ -175,7 +168,7 @@
   }
 }
 
-.advantages__list .advantages__card {
+.advantages__card {
   position: relative;
   padding: 81px 9px 19px;
   background-color: $primary-bg-color;
@@ -395,5 +388,67 @@
 
   @media (min-width: $desktop-width) {
     display: block;
+  }
+}
+
+.advantages__prev-slide {
+  @media (min-width: $desktop-width) {
+    top: 0;
+    right: 86px;
+    width: 37px;
+    height: 35px;
+    margin: 0 0 0 auto;
+    background-color: $accent-color;
+    border: none;
+
+    &::before {
+      @include pseudo(13px, 1px);
+
+      top: 50%;
+      left: 12px;
+      transform: translateY(-50%);
+      background-color: $secondary-text-color;
+    }
+
+    &::after {
+      @include pseudo(6px, 6px);
+
+      left: 12px;
+      transform: rotate(225deg);
+      border-top: 1px solid $secondary-text-color;
+      border-right: 1px solid $secondary-text-color;
+      border-radius: 1px;
+    }
+  }
+}
+
+.advantages__next-slide {
+  @media (min-width: $desktop-width) {
+    bottom: 0;
+    right: 45px;
+    width: 37px;
+    height: 35px;
+    margin: 0 0 0 auto;
+    background-color: $accent-color;
+    border: none;
+
+    &::before {
+      @include pseudo(13px, 1px);
+
+      top: 50%;
+      left: 12px;
+      transform: translateY(-50%);
+      background-color: $secondary-text-color;
+    }
+
+    &::after {
+      @include pseudo(6px, 6px);
+
+      right: 12px;
+      transform: rotate(45deg);
+      border-top: 1px solid $secondary-text-color;
+      border-right: 1px solid $secondary-text-color;
+      border-radius: 1px;
+    }
   }
 }

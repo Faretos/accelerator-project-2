@@ -19,8 +19,8 @@ function addSwiper () {
         direction: 'horizontal',
         autoHeight: true,
         loop: true,
-        initialSlide: Math.floor(advantagesCards.length / 2),
-        slidesPerView: 'auto',
+        // initialSlide: Math.floor(advantagesCards.length / 2),
+        slidesPerView: 3,
         centeredSlides: true,
         slidesPerGroup: 2,
         spaceBetween: 30,
@@ -28,7 +28,7 @@ function addSwiper () {
           nextEl: '.advantages__next-slide',
           prevEl: '.advantages__prev-slide',
         },
-        allowTouchMove: window.innerWidth < 1440,
+        // allowTouchMove: window.innerWidth < 1440,
       });
     }
   } else {
