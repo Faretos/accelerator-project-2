@@ -19,10 +19,10 @@ function addSwiper () {
         direction: 'horizontal',
         autoHeight: true,
         loop: true,
-        // initialSlide: Math.floor(advantagesCards.length / 2),
+        initialSlide: 2,
         slidesPerView: 3,
         centeredSlides: true,
-        slidesPerGroup: 2,
+        slidesPerGroup: 1,
         spaceBetween: 30,
         navigation: {
           nextEl: '.advantages__next-slide',

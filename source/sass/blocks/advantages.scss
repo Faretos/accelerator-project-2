@@ -43,7 +43,7 @@
     &::before {
       @include pseudo(882px, 402px);
 
-      top: 315px;
+      top: -286px;
       left: 0;
       z-index: -1;
       background-image:
@@ -61,7 +61,8 @@
     &::after {
       @include pseudo(449px, 263px);
 
-      bottom: -132px;
+      top: -101px;
+      bottom: auto;
       right: 0;
       z-index: -1;
       background-image:
@@ -92,7 +93,8 @@
 
   @media (min-width: $desktop-width) {
     width: 1440px;
-    padding: 101px 0 100px;
+    padding: 135px 0 100px;
+    overflow-x: hidden;
   }
 }
 
@@ -135,7 +137,7 @@
   }
 
   @media (min-width: $desktop-width) {
-    top: 72px;
+    top: 105px;
     font-size: 55px;
     line-height: 55px;
   }
@@ -143,7 +145,10 @@
 
 .advantages__list-wrapper {
   @media (min-width: $desktop-width) {
+    width: 100%;
+    padding: 0 120px;
     position: static;
+    overflow: visible;
   }
 }
 
@@ -202,9 +207,16 @@
   @media (min-width: $desktop-width) {
     width: 380px;
     min-height: 329px;
+    padding: 123px 19px 39px;
 
     &--duplicate {
       display: block;
+    }
+
+    &::after {
+      top: 39px;
+      width: 54px;
+      height: 54px;
     }
   }
 }
@@ -228,6 +240,12 @@
       top: 42px;
     }
   }
+
+  @media (min-width: $desktop-width) {
+    &::before {
+      top: 54px;
+    }
+  }
 }
 
 .advantages__card--crown {
@@ -247,6 +265,12 @@
   @media (min-width: $tablet-width) {
     &::before {
       top: 41px;
+    }
+  }
+
+  @media (min-width: $desktop-width) {
+    &::before {
+      top: 54px;
     }
   }
 }
@@ -270,6 +294,12 @@
       top: 42px;
     }
   }
+
+  @media (min-width: $desktop-width) {
+    &::before {
+      top: 55px;
+    }
+  }
 }
 
 .advantages__card--boot p br {
@@ -277,6 +307,10 @@
 
   @media (min-width: $tablet-width) {
     display: block;
+  }
+
+  @media (min-width: $desktop-width) {
+    display: none;
   }
 }
 
@@ -299,6 +333,12 @@
       top: 41px;
     }
   }
+
+  @media (min-width: $desktop-width) {
+    &::before {
+      top: 54px;
+    }
+  }
 }
 
 .advantages__card--leaf {
@@ -318,6 +358,12 @@
   @media (min-width: $tablet-width) {
     &::before {
       top: 41px;
+    }
+  }
+
+  @media (min-width: $desktop-width) {
+    &::before {
+      top: 54px;
     }
   }
 }
@@ -352,6 +398,7 @@
   }
 
   @media (min-width: $desktop-width) {
+    margin: 0 auto 15px;
     font-size: 18px;
     line-height: 18px;
   }
@@ -363,6 +410,19 @@
 
   @media (min-width: $tablet-width) {
     width: 200px;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 100%;
+    padding: 0;
+  }
+}
+
+.advantages__card--crown br {
+  display: none;
+
+  @media (min-width: $desktop-width) {
+    display: block;
   }
 }
 
@@ -393,8 +453,9 @@
 
 .advantages__prev-slide {
   @media (min-width: $desktop-width) {
-    top: 0;
-    right: 86px;
+    top: auto;
+    bottom: 15px;
+    right: 722px;
     width: 37px;
     height: 35px;
     margin: 0 0 0 auto;
@@ -424,8 +485,9 @@
 
 .advantages__next-slide {
   @media (min-width: $desktop-width) {
-    bottom: 0;
-    right: 45px;
+    top: auto;
+    bottom: 15px;
+    right: 681px;
     width: 37px;
     height: 35px;
     margin: 0 0 0 auto;
