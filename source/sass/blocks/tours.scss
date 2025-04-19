@@ -117,6 +117,19 @@
   }
 }
 
+.tours__catalog-wrapper {
+  position: static;
+  margin: 0 0 35px;
+
+  @media (min-width: $tablet-width) {
+    margin: 0 0 36px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin: 0 0 64px;
+  }
+}
+
 .tours__slider-buttons {
   display: none;
 
@@ -194,18 +207,6 @@
   @media (min-width: $desktop-width) {
     top: 120px;
     right: 120px;
-  }
-}
-
-.tours__catalog-wrapper {
-  margin: 0 0 35px;
-
-  @media (min-width: $tablet-width) {
-    margin: 0 0 36px;
-  }
-
-  @media (min-width: $desktop-width) {
-    margin: 0 0 64px;
   }
 }
 

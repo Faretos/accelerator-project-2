@@ -135,19 +135,22 @@
   }
 }
 
+.training__instructors-wrapper {
+  position: static;
+}
+
 .training__slider-buttons {
   display: none;
 
   @media (min-width: $tablet-width) {
     display: flex;
-    position: relative;
   }
 }
 
 .training__prev-slide {
   @media (min-width: $tablet-width) {
-    top: -3px;
-    right: 41px;
+    top: 217px;
+    right: 86px;
     width: 37px;
     height: 35px;
     margin: 0 0 0 auto;
@@ -175,14 +178,15 @@
   }
 
   @media (min-width: $desktop-width) {
-    top: -4px;
+    top: 235px;
+    right: 161px;
   }
 }
 
 .training__next-slide {
   @media (min-width: $tablet-width) {
-    top: -3px;
-    right: 0;
+    top: 217px;
+    right: 45px;
     width: 37px;
     height: 35px;
     margin: 0 0 0 auto;
@@ -210,7 +214,8 @@
   }
 
   @media (min-width: $desktop-width) {
-    top: -4px;
+    top: 235px;
+    right: 120px;
   }
 }
 
