@@ -28,7 +28,7 @@ function addSwiper () {
           nextEl: '.advantages__next-slide',
           prevEl: '.advantages__prev-slide',
         },
-        // allowTouchMove: window.innerWidth < 1440,
+        allowTouchMove: window.innerWidth < 1440,
       });
     }
   } else {
