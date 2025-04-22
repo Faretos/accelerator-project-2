@@ -6,7 +6,7 @@
 
   @media (min-width: $tablet-width) {
     width: 768px;
-    padding: 61px 0 0;
+    padding: 60px 0 0;
   }
 }
 
@@ -29,7 +29,7 @@
 
 .gallery__title-shadow {
   position: absolute;
-  top: 23px;
+  top: 24px;
   left: 15px;
   font-family: $primary-font;
   font-size: 26px;
@@ -38,7 +38,7 @@
   color: $title-shadow-text-color;
 
   @media (min-width: $tablet-width) {
-    top: 46px;
+    top: 44px;
     left: 45px;
     font-size: 40px;
     line-height: 40px;
@@ -71,6 +71,12 @@
   }
 }
 
+.gallery__slider {
+  @media (min-width: $tablet-width) {
+    position: static;
+  }
+}
+
 .gallery__slider-wrapper {
   margin: 0 0 3px;
 }
@@ -83,11 +89,77 @@
   }
 }
 
+.gallery__prev-slide {
+  @media (min-width: $tablet-width) {
+    top: 146px;
+    right: 86px;
+    width: 37px;
+    height: 35px;
+    margin: 0 0 0 auto;
+    background-color: $accent-color;
+    border: none;
+
+    &::before {
+      @include pseudo(13px, 1px);
+
+      top: 50%;
+      left: 12px;
+      transform: translateY(-50%);
+      background-color: $secondary-text-color;
+    }
+
+    &::after {
+      @include pseudo(6px, 6px);
+
+      left: 12px;
+      transform: rotate(225deg);
+      border-top: 1px solid $secondary-text-color;
+      border-right: 1px solid $secondary-text-color;
+      border-radius: 1px;
+    }
+  }
+}
+
+.gallery__next-slide {
+  @media (min-width: $tablet-width) {
+    top: 146px;
+    right: 45px;
+    width: 37px;
+    height: 35px;
+    margin: 0 0 0 auto;
+    background-color: $accent-color;
+    border: none;
+
+    &::before {
+      @include pseudo(13px, 1px);
+
+      top: 50%;
+      left: 13px;
+      transform: translateY(-50%);
+      background-color: $secondary-text-color;
+    }
+
+    &::after {
+      @include pseudo(6px, 6px);
+
+      right: 12px;
+      transform: rotate(45deg);
+      border-top: 1px solid $secondary-text-color;
+      border-right: 1px solid $secondary-text-color;
+      border-radius: 1px;
+    }
+  }
+}
+
 .gallery__slide {
   display: flex;
   flex-direction: column;
   gap: 7px 0;
   width: 158px;
+
+  @media (min-width: $tablet-width) {
+    width: 253px;
+  }
 }
 
 .gallery__slide img {

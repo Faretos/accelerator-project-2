@@ -5,7 +5,7 @@ const gallerySwiper = new Swiper ('.gallery__slider', {
   modules: [Navigation],
 
   direction: 'horizontal',
-  loop: false,
+  loop: true,
   autoHeight: true,
   slidesPerView: 2,
   spaceBetween: 5,
