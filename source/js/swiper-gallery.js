@@ -21,8 +21,8 @@ const gallerySwiper = new Swiper ('.gallery__slider', {
       spaceBetween: 5,
     },
     1440: {
-      slidesPerView: 'auto',
-      spaceBetween: 0,
+      slidesPerView: 5,
+      spaceBetween: 5,
     },
   },
 });
