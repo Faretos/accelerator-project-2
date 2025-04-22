@@ -17,8 +17,8 @@ const gallerySwiper = new Swiper ('.gallery__slider', {
   allowTouchMove: window.innerWidth < 1440,
   breakpoints: {
     768: {
-      slidesPerView: 'auto',
-      spaceBetween: 0,
+      slidesPerView: 3,
+      spaceBetween: 5,
     },
     1440: {
       slidesPerView: 'auto',

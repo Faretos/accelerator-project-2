@@ -83,12 +83,12 @@
   position: relative;
   width: 320px;
   margin: 0 auto;
-  padding: 37px 0 20px;
+  padding: 37px 0 5px;
   text-align: center;
 
   @media (min-width: $tablet-width) {
     width: 768px;
-    padding: 60px 45px 40px;
+    padding: 60px 45px 19px;
   }
 
   @media (min-width: $desktop-width) {

@@ -1,7 +1,13 @@
 .gallery__wrapper {
   position: relative;
   width: 320px;
-  padding: 22px 0 0;
+  margin: 0 auto;
+  padding: 37px 0 0;
+
+  @media (min-width: $tablet-width) {
+    width: 768px;
+    padding: 61px 0 0;
+  }
 }
 
 .gallery__title {
@@ -12,17 +18,31 @@
   line-height: 22px;
   font-weight: 800;
   color: $primary-text-color;
+
+  @media (min-width: $tablet-width) {
+    margin: 0 0 30px;
+    padding: 0 45px;
+    font-size: 25px;
+    line-height: 25px;
+  }
 }
 
 .gallery__title-shadow {
   position: absolute;
-  top: 8px;
+  top: 23px;
   left: 15px;
   font-family: $primary-font;
   font-size: 26px;
   line-height: 26px;
   font-weight: 800;
   color: $title-shadow-text-color;
+
+  @media (min-width: $tablet-width) {
+    top: 46px;
+    left: 45px;
+    font-size: 40px;
+    line-height: 40px;
+  }
 }
 
 .gallery__wrapper p {
@@ -33,6 +53,26 @@
   line-height: 18px;
   font-weight: 400;
   color: $primary-text-color;
+
+  @media (min-width: $tablet-width) {
+    width: 430px;
+    margin: 0 0 21px;
+    padding: 0 0 0 45px;
+    font-size: 14px;
+    line-height: 22px;
+  }
+}
+
+.gallery__wrapper p br {
+  display: none;
+
+  @media (min-width: $tablet-width) {
+    display: block;
+  }
+}
+
+.gallery__slider-wrapper {
+  margin: 0 0 3px;
 }
 
 .gallery__slider-buttons {
@@ -47,6 +87,7 @@
   display: flex;
   flex-direction: column;
   gap: 7px 0;
+  width: 158px;
 }
 
 .gallery__slide img {
