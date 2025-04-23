@@ -1,0 +1,83 @@
+.form {
+  position: relative;
+  background-image:
+    image-set(
+      url("../../img/form/form-bg-mobile@1x.webp") type("image/webp") 1x,
+      url("../../img/form/form-bg-mobile@2x.webp") type("image/webp") 2x,
+      url("../../img/form/form-bg-mobile@1x.png") type("image/png") 1x,
+      url("../../img/form/form-bg-mobile@2x.png") type("image/png") 2x,
+    );
+  background-repeat: no-repeat;
+  background-position: -208px -1px;
+  background-size: cover;
+  z-index: -1;
+
+  &::before {
+    @include pseudo(100%, 100%);
+
+    background-color: rgba(0, 0, 0, 0.2);
+    z-index: 0;
+  }
+}
+
+.form__wrapper {
+  position: relative;
+  width: 320px;
+  padding: 176px 31px;
+  text-align: center;
+  z-index: 1;
+}
+
+.form__wrapper h2 {
+  margin: 0 0 17px;
+  padding: 0;
+  font-family: $primary-font;
+  font-size: 22px;
+  line-height: 22px;
+  font-weight: 800;
+  color: $secondary-text-color;
+}
+
+.form__wrapper p {
+  margin: 0 0 21px;
+  padding: 0;
+  font-family: $primary-font;
+  font-size: 12px;
+  line-height: 18px;
+  font-weight: 400;
+  color: $secondary-text-color;
+}
+
+.form__form input {
+  min-width: 256px;
+  padding: 15px 0 14px 14px;
+  border: none;
+  box-shadow: 0 0 0 1px $primary-bg-color;
+  border-radius: 2px;
+  font-family: $primary-font;
+  font-size: 16px;
+  line-height: 16px;
+  font-weight: 400;
+  color: $primary-text-color;
+}
+
+.form__form-telephone {
+  margin: 0 0 10px;
+}
+
+.form__form-email {
+  margin: 0 0 10px;
+}
+
+.form__button {
+  min-width: 256px;
+  padding: 21px 19px 19px;
+  box-shadow: 0 0 0 1px $accent-color;
+  background-color: $accent-color;
+  border: none;
+  font-family: $primary-font;
+  font-size: 16px;
+  line-height: 16px;
+  font-weight: 500;
+  color: $secondary-text-color;
+}

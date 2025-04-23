@@ -642,6 +642,24 @@
         </div>
       </div>
     </section>
+    <!-- FORM -->
+    <section class="form" data-test="form">
+      <div class="form__wrapper">
+        <h2>Остались вопросы?</h2>
+        <p>Заполните форму и наш оператор свяжется<br> с вами для консультации.</p>
+        <form class="form__form" method="post" action="https://echo.htmlacademy.ru" id="form-form">
+          <div class="form__form-telephone">
+            <label class="visually-hidden" for="phone">Укажите свой номер телефона</label>
+            <input class="form__telephone-input" placeholder="Телефон" type="tel" name="phone" id="phone" pattern="^+7\d{10}$" minlength="12" maxlength="12" required>
+          </div>
+          <div class="form__form-email">
+            <label class="visually-hidden" for="email">Укажите свой email</label>
+            <input class="form__email-input" placeholder="Email" type="email" name="email" id="email" required>
+          </div>
+          <button class="form__button" type="submit">Отправить</button>
+        </form>
+      </div>
+    </section>
   </main>
   <!-- пример использования спрайта -->
   <!-- <img src="/__spritemap#sprite-logo-view" alt="Это спрайт">
@@ -649,7 +667,7 @@
     <use href="/__spritemap#sprite-user"></use>
   </svg> -->
   <!-- примеры требуемых атрибутов data-test="*" -->
-  <div data-test="form">form</div>
+  <div>form</div>
   <div data-test="footer">footer</div>
   <script type="module" src="js/main.js"></script>
 </body>
