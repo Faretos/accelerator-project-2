@@ -661,14 +661,96 @@
       </div>
     </section>
   </main>
+  <footer class="footer" data-test="footer">
+    <section class="footer__contacts contacts">
+      <div class="contacts__text">
+        <h2 class="contacts__title title-reset">Контакты</h2>
+        <span class="contacts__title-shadow">Контакты</span>
+        <p>Свяжитесь с нами любым удобным для вас способом или приходите к нам в гости. Мы будем рады поделиться увлекательными историями и подобрать для вас тур.</p>
+        <ul class="contacts__list list-style-reset">
+          <li class="contacts__item contacts__item--telephone">
+            <h3 class="contacts__item-title title-reset">Телефон</h3>
+            <a class="contacts__link" href="tel:+79837454545">+7 983 745-45-45</a>
+          </li>
+          <li class="contacts__item contacts__item--email">
+            <h3 class="contacts__item-title title-reset">Email</h3>
+            <a class="contacts__link" href="mailto:info@lifetour.com">info@lifetour.com</a>
+          </li>
+          <li class="contacts__item contacts__item--address">
+            <h3 class="contacts__item-title title-reset">Адрес</h3>
+            <p>г. Москва, пр-т Мира, д. 14, офис 101</p>
+          </li>
+        </ul>
+      </div>
+      <div class="contacts__map-wrapper">
+        <picture>
+          <source type="image/webp" media="(min-width: 1440px)" srcset="./img/contacts/contacts-map-desktop@1x.webp, ./img/contacts/contacts-map-desktop@2x.webp 2x" width="600" height="324">
+          <source type="image/webp" media="(min-width: 758px)" srcset="./img/contacts/contacts-map-tablet@1x.webp, ./img/contacts/contacts-map-tablet@2x.webp 2x" width="768" height="340">
+          <source type="image/webp" srcset="./img/contacts/contacts-map-mobile@1x.jpg, ./img/contacts/contacts-map-mobile@2x.jpg 2x" width="320" height="343">
+
+          <source type="image/jpg" media="(min-width: 1440px)" srcset="./img/contacts/contacts-map-desktop@1x.jpg, ./img/contacts/contacts-map-desktop@2x.jpg 2x" width="600" height="324">
+          <source type="image/jpg" media="(min-width: 758px)" srcset="./img/contacts/contacts-map-tablet@1x.jpg, ./img/contacts/contacts-map-tablet@2x.jpg 2x" width="768" height="340">
+          <img class="contacts__map-image" src="./img/contacts/contacts-map-mobile@1x.jpg" srcset="./img/contacts/contacts-map-mobile@2x.jpg 2x" width="320" height="343" alt="Где мы находимся">
+        </picture>
+      </div>
+    </section>
+    <section class="footer__footer">
+      <div class="footer__footer-wrapper">
+        <h2 class="visually-hidden">Подвал сайта</h2>
+        <div class="footer__logo-wrapper">
+          <picture>
+            <source type="image/svg+xml" media="(min-width: 1440px)" srcset="/__spritemap#sprite-logo-view" width="142" height="42">
+            <source type="image/svg+xml" media="(min-width: 768px)" srcset="/__spritemap#sprite-logo-view" width="142" height="42">
+            <img class="footer__logo-image" src="/__spritemap#sprite-logo-view" width="142" height="42" alt="Логотип Lifetour">
+          </picture>
+        </div>
+        <ul class="footer__list list-style-reset">
+          <li class="footer__item">
+            <a class="footer__link" href="#">Туры</a>
+          </li>
+          <li class="footer__item">
+            <a class="footer__link" href="#">Обучение</a>
+          </li>
+          <li class="footer__item">
+            <a class="footer__link" href="#">О нас</a>
+          </li>
+          <li class="footer__item">
+            <a class="footer__link" href="#">Отзывы</a>
+          </li>
+          <li class="footer__item">
+            <a class="footer__link" href="#">Фотографии</a>
+          </li>
+          <li class="footer__item">
+            <a class="footer__link" href="#">Контакты</a>
+          </li>
+        </ul>
+        <a class="footer__telephone" href="tel:+78007253232">8 800 725-32-32</a>
+        <ul class="footer__social-list list-style-reset">
+          <li class="footer__social-item">
+            <a class="footer__link footer__link--vk" href="#">
+              <span class="visually-hidden">Мы в ВК</span>
+            </a>
+          </li>
+          <li class="footer__social-item">
+            <a class="footer__link footer__link--ok" href="#">
+              <span class="visually-hidden">Мы в ОК</span>
+            </a>
+          </li>
+          <li class="footer__social-item">
+            <a class="footer__link footer__link--rd" href="#">
+              <span class="visually-hidden">Мы на Reddit</span>
+            </a>
+          </li>
+        </ul>
+        <a class="footer__policy" href="#">Политика конфиденциальности</a>
+      </div>
+    </section>
+  </footer>
   <!-- пример использования спрайта -->
   <!-- <img src="/__spritemap#sprite-logo-view" alt="Это спрайт">
   <svg>
     <use href="/__spritemap#sprite-user"></use>
   </svg> -->
-  <!-- примеры требуемых атрибутов data-test="*" -->
-  <div>form</div>
-  <div data-test="footer">footer</div>
   <script type="module" src="js/main.js"></script>
 </body>
 
