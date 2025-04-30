@@ -48,11 +48,9 @@
         </ul>
       </nav>
       <div class="header__logo-wrapper">
-        <picture>
-          <source type="image/svg+xml" media="(min-width: 1440px)" srcset="/__spritemap#sprite-logo-view" width="142" height="42">
-          <source type="image/svg+xml" media="(min-width: 768px)" srcset="/__spritemap#sprite-logo-view" width="142" height="42">
-          <img class="header__logo-image" src="/__spritemap#sprite-logo-view" width="142" height="42" alt="Логотип Lifetour">
-        </picture>
+        <svg class="header__logo-image" width="142" height="42" aria-label="Логотип Lifetour">
+          <use href="/__spritemap#sprite-logo-header"></use>
+        </svg>
       </div>
       <a class="header__telephone" href="tel:+78000000000">8 800 000-00-00</a>
     </div>
@@ -661,7 +659,9 @@
       </div>
     </section>
   </main>
+  <!-- FOOTER -->
   <footer class="footer" data-test="footer">
+    <!-- CONTACTS -->
     <section class="footer__contacts contacts">
       <div class="contacts__text">
         <h2 class="contacts__title title-reset">Контакты</h2>
@@ -682,45 +682,34 @@
           </li>
         </ul>
       </div>
-      <div class="contacts__map-wrapper">
-        <picture>
-          <source type="image/webp" media="(min-width: 1440px)" srcset="./img/contacts/contacts-map-desktop@1x.webp, ./img/contacts/contacts-map-desktop@2x.webp 2x" width="600" height="324">
-          <source type="image/webp" media="(min-width: 758px)" srcset="./img/contacts/contacts-map-tablet@1x.webp, ./img/contacts/contacts-map-tablet@2x.webp 2x" width="768" height="340">
-          <source type="image/webp" srcset="./img/contacts/contacts-map-mobile@1x.jpg, ./img/contacts/contacts-map-mobile@2x.jpg 2x" width="320" height="343">
-
-          <source type="image/jpg" media="(min-width: 1440px)" srcset="./img/contacts/contacts-map-desktop@1x.jpg, ./img/contacts/contacts-map-desktop@2x.jpg 2x" width="600" height="324">
-          <source type="image/jpg" media="(min-width: 758px)" srcset="./img/contacts/contacts-map-tablet@1x.jpg, ./img/contacts/contacts-map-tablet@2x.jpg 2x" width="768" height="340">
-          <img class="contacts__map-image" src="./img/contacts/contacts-map-mobile@1x.jpg" srcset="./img/contacts/contacts-map-mobile@2x.jpg 2x" width="320" height="343" alt="Где мы находимся">
-        </picture>
-      </div>
+      <div class="contacts__map-wrapper"></div>
     </section>
+    <!-- FOOTER SECTION -->
     <section class="footer__footer">
       <div class="footer__footer-wrapper">
         <h2 class="visually-hidden">Подвал сайта</h2>
         <div class="footer__logo-wrapper">
-          <picture>
-            <source type="image/svg+xml" media="(min-width: 1440px)" srcset="/__spritemap#sprite-logo-view" width="142" height="42">
-            <source type="image/svg+xml" media="(min-width: 768px)" srcset="/__spritemap#sprite-logo-view" width="142" height="42">
-            <img class="footer__logo-image" src="/__spritemap#sprite-logo-view" width="142" height="42" alt="Логотип Lifetour">
-          </picture>
+          <svg class="footer__logo-image" width="142" height="42" aria-label="Логотип Lifetour">
+            <use href="/__spritemap#sprite-logo-footer"></use>
+          </svg>
         </div>
         <ul class="footer__list list-style-reset">
-          <li class="footer__item">
+          <li class="footer__item footer__item--tours">
             <a class="footer__link" href="#">Туры</a>
           </li>
-          <li class="footer__item">
+          <li class="footer__item footer__item--study">
             <a class="footer__link" href="#">Обучение</a>
           </li>
-          <li class="footer__item">
+          <li class="footer__item footer__item--about">
             <a class="footer__link" href="#">О нас</a>
           </li>
-          <li class="footer__item">
+          <li class="footer__item footer__item--reviews">
             <a class="footer__link" href="#">Отзывы</a>
           </li>
-          <li class="footer__item">
+          <li class="footer__item footer__item--photos">
             <a class="footer__link" href="#">Фотографии</a>
           </li>
-          <li class="footer__item">
+          <li class="footer__item footer__item--contacts">
             <a class="footer__link" href="#">Контакты</a>
           </li>
         </ul>
