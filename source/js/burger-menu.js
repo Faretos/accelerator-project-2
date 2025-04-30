@@ -1,3 +1,4 @@
+const body = document.body;
 const burgerMenuButton = document.querySelector('.header__burger-menu-button');
 const navList = document.querySelector('.header__navigation');
 const navLinks = document.querySelectorAll('.header__navigation-link');
@@ -9,10 +10,16 @@ function burgerMenuToggle() {
     return;
   }
 
-  burgerMenuButton.classList.toggle('header__burger-menu-button--openned');
+  const isOpened = burgerMenuButton.classList.toggle('header__burger-menu-button--openned');
   navList.classList.toggle('header__navigation--openned');
   headerWrapper.classList.toggle('header__wrapper--nav-openned');
   telephone.classList.toggle('header__telephone--openned');
+
+  if (isOpened) {
+    body.classList.add('page-body--no-scroll');
+  } else {
+    body.classList.remove('page-body--no-scroll');
+  }
 }
 
 function closeBurgerMenu() {
@@ -20,6 +27,7 @@ function closeBurgerMenu() {
   navList.classList.remove('header__navigation--openned');
   headerWrapper.classList.remove('header__wrapper--nav-openned');
   telephone.classList.remove('header__telephone--openned');
+  body.classList.remove('page-body--no-scroll');
 }
 
 function updateBurgerMenu() {
