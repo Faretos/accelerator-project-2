@@ -10,7 +10,7 @@
   background-repeat: no-repeat;
   background-position: -208px -1px;
   background-size: cover;
-  z-index: -1;
+  z-index: 0;
 
   &::before {
     @include pseudo(100%, 100%);
@@ -112,7 +112,6 @@
 .form__form input {
   width: 258px;
   padding: 15px 0 14px 14px;
-  border: 1px solid $instructor-card-border-color;
   border-radius: 2px;
   font-family: $primary-font;
   font-size: 16px;
@@ -124,6 +123,22 @@
     width: 360px;
     padding: 17px 0 17px 28px;
   }
+}
+
+.form__email-input {
+  border: 1px solid $instructor-card-border-color;
+}
+
+.form__telephone-input {
+  border: 1px solid $instructor-card-border-color;
+}
+
+.form__form input::placeholder {
+  font-family: $primary-font;
+  font-size: 16px;
+  line-height: 16px;
+  font-weight: 400;
+  color: $input-placeholder-text-color;
 }
 
 .form__form-telephone {
@@ -166,4 +181,26 @@
     width: 358px;
     padding: 20px 19px 17px;
   }
+}
+
+.form__form input:hover {
+  border: 1px solid $accent-color;
+}
+
+.form__form input:focus {
+  outline: none;
+  border: 1px solid $primary-text-color;
+}
+
+.form__input-error {
+  border: 1px solid $error-color;
+}
+
+.form__form input:disabled {
+  pointer-events: none;
+  border: 1px solid $disabled-slider-button;
+}
+
+.form__form input:disabled::placeholder {
+  color: $disabled-text-color;
 }
