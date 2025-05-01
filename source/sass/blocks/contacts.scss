@@ -331,3 +331,23 @@
   margin: 0 auto;
   object-fit: cover;
 }
+
+.contacts__link:hover {
+  opacity: 0.5;
+  color: $accent-color;
+}
+
+.contacts__link:focus {
+  outline: none;
+  color: $accent-color;
+}
+
+.contacts__link:active {
+  opacity: 1;
+  color: $active-color;
+}
+
+.contacts__link.disabled {
+  pointer-events: none;
+  color: $disabled-slider-button;
+}

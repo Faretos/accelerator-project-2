@@ -1,4 +1,5 @@
 const body = document.body;
+const main = body.querySelector('main');
 const burgerMenuButton = document.querySelector('.header__burger-menu-button');
 const navList = document.querySelector('.header__navigation');
 const navLinks = document.querySelectorAll('.header__navigation-link');
@@ -17,8 +18,10 @@ function burgerMenuToggle() {
 
   if (isOpened) {
     body.classList.add('page-body--no-scroll');
+    main.classList.add('page-main--color');
   } else {
     body.classList.remove('page-body--no-scroll');
+    main.classList.remove('page-main--color');
   }
 }
 
@@ -28,6 +31,7 @@ function closeBurgerMenu() {
   headerWrapper.classList.remove('header__wrapper--nav-openned');
   telephone.classList.remove('header__telephone--openned');
   body.classList.remove('page-body--no-scroll');
+  main.classList.remove('page-main--color');
 }
 
 function updateBurgerMenu() {

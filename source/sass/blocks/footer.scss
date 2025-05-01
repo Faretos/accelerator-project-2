@@ -157,6 +157,7 @@
 }
 
 .footer__link {
+  position: relative;
   display: block;
   width: 100%;
   height: 100%;
@@ -211,13 +212,18 @@
 .footer__social-item {
   width: 30px;
   height: 30px;
-  border: 1px solid $social-icon-border-color;
   box-sizing: border-box;
 }
 
-.footer__link--vk {
+.footer__social-link {
+  display: block;
   position: relative;
+  width: 100%;
+  height: 100%;
+  border: 1px solid $social-icon-border-color;
+}
 
+.footer__social-link--vk {
   &::before {
     @include pseudo(16px, 9px);
 
@@ -232,9 +238,7 @@
   }
 }
 
-.footer__link--ok {
-  position: relative;
-
+.footer__social-link--ok {
   &::before {
     @include pseudo(9px, 16px);
 
@@ -249,9 +253,7 @@
   }
 }
 
-.footer__link--rd {
-  position: relative;
-
+.footer__social-link--rd {
   &::before {
     @include pseudo(14px, 15px);
 
@@ -268,6 +270,7 @@
 
 .footer__policy {
   display: block;
+  position: relative;
   width: 100%;
   height: 100%;
   font-family: $primary-font;
@@ -286,4 +289,95 @@
   @media (min-width: $desktop-width) {
     grid-column: 1 / 4;
   }
+}
+
+.footer__link:hover {
+  &::after {
+    @include pseudo(100%, 1px);
+
+    bottom: -3px;
+    left: 0;
+    background-color: $primary-text-color;
+  }
+}
+
+.footer__link:focus {
+  outline: 1px solid $primary-text-color;
+
+  &::after {
+    display: none;
+  }
+}
+
+.footer__link:active {
+  outline: none;
+  color: $accent-color;
+}
+
+.footer__link.disabled {
+  pointer-events: none;
+  color: $disabled-slider-button;
+}
+
+.footer__telephone:hover {
+  opacity: 0.5;
+  color: $accent-color;
+}
+
+.footer__telephone:focus {
+  outline: none;
+  color: $accent-color;
+}
+
+.footer__telephone:active {
+  opacity: 1;
+  color: $active-color;
+}
+
+.footer__telephone.disabled {
+  pointer-events: none;
+  color: $disabled-slider-button;
+}
+
+.footer__social-link:hover {
+  border: 1px solid $primary-text-color;
+}
+
+.footer__social-link:focus {
+  outline: none;
+  border: 1px solid $primary-bg-color;
+}
+
+.footer__social-link:active {
+  border: 1px solid $accent-color;
+  background-color: $accent-color;
+
+  &::before {
+    background-color: $primary-bg-color;
+  }
+}
+
+.footer__social-link.disabled {
+  pointer-events: none;
+  opacity: 0.3;
+}
+
+.footer__policy:hover {
+  opacity: 0.5;
+  color: $accent-color;
+}
+
+.footer__policy:focus {
+  outline: none;
+  color: $accent-color;
+}
+
+.footer__policy:active {
+  opacity: 1;
+  color: $active-color;
+}
+
+.footer__policy.disabled {
+  pointer-events: none;
+  color: $disabled-slider-button;
 }

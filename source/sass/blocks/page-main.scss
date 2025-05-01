@@ -1,3 +1,16 @@
 .page-main {
   flex-grow: 1;
 }
+
+.page-main--color {
+  position: relative;
+
+  &::before {
+    @include pseudo(100%, 100%);
+
+    top: 0;
+    left: 0;
+    z-index: 10;
+    background-color: $body-color;
+  }
+}

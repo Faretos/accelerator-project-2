@@ -168,9 +168,8 @@
 .form__button {
   width: 256px;
   padding: 21px 19px 19px;
-  box-shadow: 0 0 0 1px $accent-color;
   background-color: $accent-color;
-  border: none;
+  border: 1px solid $accent-color;
   font-family: $primary-font;
   font-size: 16px;
   line-height: 16px;
@@ -203,4 +202,31 @@
 
 .form__form input:disabled::placeholder {
   color: $disabled-text-color;
+}
+
+.form__button:hover {
+  border: 1px solid $active-color;
+  background-color: $primary-bg-color;
+  color: $active-color;
+}
+
+.form__button:focus {
+  outline: none;
+  border: 1px solid $primary-bg-color;
+  color: $active-color;
+  background-color: $primary-bg-color;
+}
+
+.form__button:active {
+  border: 1px solid $active-color;
+  color: $secondary-text-color;
+  background-color: $active-color;
+}
+
+.form__button:disabled,
+.form__button.disabled {
+  pointer-events: none;
+  border: 1px solid $disabled-slider-button;
+  color: $secondary-text-color;
+  background-color: $disabled-slider-button;
 }

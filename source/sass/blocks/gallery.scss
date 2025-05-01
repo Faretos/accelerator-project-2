@@ -212,3 +212,54 @@
   display: block;
   object-fit: cover;
 }
+
+.gallery__slider-buttons button:hover {
+  background-color: $primary-bg-color;
+  border: 1px solid $active-color;
+
+  &::before {
+    background-color: $active-color;
+  }
+
+  &::after {
+    border-top: 1px solid $active-color;
+    border-right: 1px solid $active-color;
+  }
+}
+
+.gallery__slider-buttons button:focus {
+  outline: none;
+  background-color: $primary-bg-color;
+  border: 1px solid $primary-bg-color;
+
+  &::before {
+    background-color: $active-color;
+  }
+
+  &::after {
+    border-top: 1px solid $active-color;
+    border-right: 1px solid $active-color;
+  }
+}
+
+.gallery__slider-buttons button:active {
+  background-color: $active-color;
+  border: 1px solid $active-color;
+
+  &::before {
+    background-color: $primary-bg-color;
+  }
+
+  &::after {
+    border-top: 1px solid $primary-bg-color;
+    border-right: 1px solid $primary-bg-color;
+  }
+}
+
+.gallery__slider-buttons button:disabled,
+.gallery__slider-buttons .swiper-button-disabled {
+  pointer-events: none;
+  opacity: 1;
+  background-color: $disabled-slider-button;
+  border: 1px solid $disabled-slider-button;
+}

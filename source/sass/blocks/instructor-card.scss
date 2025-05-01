@@ -94,3 +94,26 @@
   font-weight: 400;
   color: $primary-text-color;
 }
+
+.instructor-card__link:hover {
+  border: 1px solid $primary-text-color;
+}
+
+.instructor-card__link:focus {
+  outline: none;
+  border: 1px solid $primary-bg-color;
+}
+
+.instructor-card__link:active {
+  border: 1px solid $accent-color;
+  background-color: $accent-color;
+
+  &::before {
+    background-color: $primary-bg-color;
+  }
+}
+
+.instructor-card__link.disabled {
+  pointer-events: none;
+  opacity: 0.3;
+}

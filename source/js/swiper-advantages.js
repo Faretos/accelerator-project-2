@@ -10,7 +10,10 @@ function addSwiper () {
   if (window.innerWidth >= 1440) {
     advantagesList.classList.add('swiper-wrapper');
     advantagesListWrapper.classList.add('swiper');
-    advantagesCards.forEach((card) => card.classList.add('swiper-slide'));
+    advantagesCards.forEach((card) => {
+      card.classList.add('swiper-slide');
+      card.setAttribute('tabindex', '0');
+    });
 
     if (!advantagesSwiper) {
       advantagesSwiper = new Swiper ('.advantages__list-wrapper', {
@@ -39,7 +42,10 @@ function addSwiper () {
       }
       advantagesList.classList.remove('swiper-wrapper');
       advantagesListWrapper.classList.remove('swiper');
-      advantagesCards.forEach((card) => card.classList.remove('swiper-slide'));
+      advantagesCards.forEach((card) => {
+        card.classList.remove('swiper-slide');
+        card.removeAttribute('tabindex');
+      });
     }
   }
 }
