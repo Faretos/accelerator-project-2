@@ -1,6 +1,8 @@
 import Swiper from 'swiper';
 import {Navigation} from 'swiper/modules';
 
+const slides = document.querySelectorAll('.gallery__slide');
+
 let gallerySwiper = null;
 
 function initSwiper() {
@@ -24,23 +26,37 @@ function initSwiper() {
         },
       },
     });
+
+    slides.forEach((slide) => {
+      if (!slide.hasAttribute('tabindex')) {
+        slide.setAttribute('tabindex', '0');
+      }
+    });
   }
 }
 
 function destroySwiper() {
   if (gallerySwiper) {
+    slides.forEach((slide) => {
+      slide.removeAttribute('tabindex');
+    });
+
     gallerySwiper.destroy(true, true);
     gallerySwiper = null;
   }
 }
 
 function handleResize() {
-  if (window.innerWidth < 1440) {
-    destroySwiper();
+  if (window.innerWidth > 1440) {
+    if (gallerySwiper) {
+      destroySwiper();
+    }
   } else {
-    initSwiper();
+    if (!gallerySwiper) {
+      initSwiper();
+    }
   }
 }
 
-window.addEventListener('load', initSwiper);
+window.addEventListener('load', handleResize);
 window.addEventListener('resize', handleResize);
