@@ -5,4 +5,4 @@ import './swiper-instructors.js';
 import './swiper-reviews.js';
 import './swiper-advantages.js';
 import './swiper-gallery.js';
-import './form-validation.js';
+import './form.js';
