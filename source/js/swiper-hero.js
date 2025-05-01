@@ -1,6 +1,8 @@
 import Swiper from 'swiper';
 import {Pagination} from 'swiper/modules';
 
+const bullets = document.querySelectorAll('.hero__pagination-bullet');
+
 const heroSwiper = new Swiper ('.hero__wrapper', {
   modules: [Pagination],
 
@@ -15,12 +17,16 @@ const heroSwiper = new Swiper ('.hero__wrapper', {
     type: 'bullets',
     clickable: true,
     renderBullet: function (index, className) {
-      return `<span class="${ className } hero__pagination-bullet"></span>`;
+      return `<span class="${ className } hero__pagination-bullet" tabindex="0"></span>`;
     }
   },
   allowTouchMove: window.innerWidth < 1440,
   breakpoints: {
     768: {
+      keyboard: {
+        enabled: true,
+        onlyInViewport: true,
+      },
       slidesPerView: 1,
       spaceBetween: 0,
     },
@@ -31,7 +37,6 @@ const heroSwiper = new Swiper ('.hero__wrapper', {
   },
 });
 
-const bullets = document.querySelectorAll('.hero__pagination-bullet');
 if (bullets.length > 0) {
   bullets[0].classList.add('hero__pagination-bullet--active');
 }

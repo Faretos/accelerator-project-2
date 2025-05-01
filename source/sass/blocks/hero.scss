@@ -179,14 +179,18 @@
 
 .hero__card-button {
   margin: 0;
-  padding: 21px 34px 19px;
+  padding: 20px 33px 17px;
   font-family: $primary-font;
   font-size: 16px;
   line-height: 16px;
   font-weight: 500;
+  border: 1px solid transparent;
   color: $secondary-text-color;
-  border: none;
   background-color: $accent-color;
+
+  @media (min-width: $tablet-width) {
+    padding: 20px 33px 18px;
+  }
 }
 
 .hero__card-image-wrapper {
@@ -292,10 +296,55 @@
   }
 }
 
-.hero__pagination-bullet:not(.hero__pagination-bullet--active) {
+.hero__pagination-bullet:not(.swiper-pagination-bullet-active) {
   background-color: transparent;
 }
 
-.hero__pagination-bullet--active {
+.hero__pagination .swiper-pagination-bullet-active {
   background-color: $secondary-text-color;
+}
+
+.hero__card-button:hover {
+  border: 1px solid $active-color;
+  background-color: $primary-bg-color;
+  color: $active-color;
+}
+
+.hero__card-button:focus {
+  outline: none;
+  border: 1px solid $primary-bg-color;
+  color: $active-color;
+  background-color: $primary-bg-color;
+}
+
+
+.hero__card-button:active {
+  border: 1px solid $active-color;
+  color: $secondary-text-color;
+  background-color: $active-color;
+}
+
+.hero__card-button:disabled,
+.hero__card-button.disabled {
+  pointer-events: none;
+  border: 1px solid $disabled-slider-button;
+  color: $secondary-text-color;
+  background-color: $disabled-slider-button;
+}
+
+.hero__pagination-bullet:not(.swiper-pagination-bullet-active):hover {
+  background-color: $pagination-hover-color;
+}
+
+.hero__pagination-bullet:not(.swiper-pagination-bullet-active):focus {
+  outline: 1px solid $hero-card-about-border-color;
+  outline-offset: 2px;
+}
+
+.hero-pagination .swiper-pagination-bullet-active:focus {
+  outline: none;
+}
+
+.hero__pagination-bullet:not(.swiper-pagination-bullet-active):active {
+  background-color: $hero-card-about-border-color;
 }
