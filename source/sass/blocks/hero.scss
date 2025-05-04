@@ -316,6 +316,8 @@
 }
 
 .hero__pagination .swiper-pagination-bullet-active {
+  outline: none;
+  pointer-events: none;
   background-color: $secondary-text-color;
 }
 
