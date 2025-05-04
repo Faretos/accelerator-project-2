@@ -25,6 +25,7 @@
   color: $primary-text-color;
 
   @media (min-width: $tablet-width) {
+    width: 450px;
     margin: 0 0 30px;
     padding: 0 45px;
     font-size: 25px;
@@ -32,6 +33,7 @@
   }
 
   @media (min-width: $desktop-width) {
+    width: 900px;
     margin: 0 0 24px;
     padding: 0 120px;
     font-size: 35px;
@@ -52,6 +54,7 @@
   @media (min-width: $tablet-width) {
     top: 44px;
     left: 45px;
+    width: 560px;
     font-size: 40px;
     line-height: 40px;
   }
@@ -59,6 +62,7 @@
   @media (min-width: $desktop-width) {
     top: 106px;
     left: 120px;
+    width: 1025px;
     font-size: 55px;
     line-height: 55px;
   }

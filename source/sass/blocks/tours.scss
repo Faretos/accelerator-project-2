@@ -80,12 +80,14 @@
   color: $primary-text-color;
 
   @media (min-width: $tablet-width) {
+    width: 450px;
     margin: 0 0 35px;
     font-size: 25px;
     line-height: 25px;
   }
 
   @media (min-width: $desktop-width) {
+    width: 900px;
     margin: 0 0 50px;
     font-size: 35px;
     line-height: 35px;
@@ -103,17 +105,19 @@
   color: $title-shadow-text-color;
 
   @media (min-width: $tablet-width) {
-    font-size: 40px;
-    line-height: 40px;
     top: 45px;
     left: 45px;
+    width: 560px;
+    font-size: 40px;
+    line-height: 40px;
   }
 
   @media (min-width: $desktop-width) {
-    font-size: 55px;
-    line-height: 55px;
     top: 106px;
     left: 120px;
+    width: 1025px;
+    font-size: 55px;
+    line-height: 55px;
   }
 }
 
