@@ -99,7 +99,7 @@
 }
 
 .advantages__title {
-  margin: 0 0 36px;
+  margin: 0 auto 36px;
   font-family: $primary-font;
   font-size: 22px;
   line-height: 22px;
@@ -108,14 +108,14 @@
 
   @media (min-width: $tablet-width) {
     width: 678px;
-    margin: 0 0 60px;
+    margin: 0 auto 60px;
     font-size: 25px;
     line-height: 25px;
   }
 
   @media (min-width: $desktop-width) {
     width: 1200px;
-    margin: 0 0 50px;
+    margin: 0 auto 50px;
     font-size: 35px;
     line-height: 35px;
   }

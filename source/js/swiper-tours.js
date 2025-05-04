@@ -14,7 +14,6 @@ const toursSwiper = new Swiper ('.tours__catalog-wrapper', {
     nextEl: '.tours__next-slide',
     prevEl: '.tours__prev-slide',
   },
-  allowTouchMove: window.innerWidth < 1440,
   breakpoints: {
     768: {
       slidesPerView: 2,

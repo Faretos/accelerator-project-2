@@ -14,7 +14,6 @@ const reviewsSwiper = new Swiper ('.reviews__reviews-swiper', {
     nextEl: '.reviews__next-slide',
     prevEl: '.reviews__prev-slide',
   },
-  allowTouchMove: window.innerWidth < 1440,
   breakpoints: {
     768: {
       slidesPerView: 'auto',

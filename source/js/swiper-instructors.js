@@ -7,7 +7,7 @@ const instructorsSwiper = new Swiper ('.training__instructors-wrapper', {
   direction: 'horizontal',
   initialSlide: 2,
   loop: false,
-  autoHeight: true,
+  autoHeight: false,
   slidesPerView: 1,
   spaceBetween: 10,
 
@@ -15,7 +15,6 @@ const instructorsSwiper = new Swiper ('.training__instructors-wrapper', {
     nextEl: '.training__next-slide',
     prevEl: '.training__prev-slide',
   },
-  allowTouchMove: window.innerWidth < 1440,
   breakpoints: {
     768: {
       slidesPerView: 3,
